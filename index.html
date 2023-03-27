@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+
+  <head>
+    <title>Medication Price Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Transparent Pricing</h1>
+        <p align="center"><small>Free delivery. No consult fees. </small></p>
+      <input type="text" id="searchBar" onkeyup="searchDrugs()" placeholder="Search for medicine...">
+
+
+      <div class="drugListContainer">
+
+      <table id="drugList">
+
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>Brand</th>
+            <th>Dose</th>
+            <th>Frequency</th>
+            <th></th>
+          </tr>
+        </thead>
+        <thead id="drugListHeader" style="display: none;">
+          <tr>
+            <th>Medication</th>
+            <th>Brand</th>
+            <th>Dose</th>
+            <th>Frequency</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      </div>
+
+      <div id="cart">
+        <h3>Cart</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Brand</th>
+              <th>Monthly Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cartItems">
+          </tbody>
+        </table>
+        <div id="total">
+          <p>Total Quantity: <span id="totalQuantity">0</span></p>
+          <p>Total Price: <span id="totalPrice">$0.00</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
