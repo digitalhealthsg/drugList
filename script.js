@@ -5,7 +5,7 @@ let hiddenRows = [];
 
 // Parse CSV file and convert to array of objects
 Papa.parse("https://099a9f3d-7218-4373-b1f1-bae69f5b1a92.usrfiles.com/ugd/099a9f_951399d95857433a9f03a2eb1b0f97eb.csv", {
-  header: true,
+  header: ["drugName", "drugBrand", "drugDoseQuantity", "drugDoseUnit", "drugDoseFrequencyFactor", "drugPrice", "drugMinOrderQty"],
   download: true,
   complete: function(results) {
     if (results.errors.length > 0) {
@@ -80,7 +80,7 @@ function addToCart(medicine, price, brand) {
       // Add the item to the cart
       item = {
         medicine: medicine,
-        brand: brand,
+        brand: brand, // add brand parameter to item object
         quantity: 1,
         price: price
       };
@@ -89,7 +89,8 @@ function addToCart(medicine, price, brand) {
     // Hide the row in the search list
     const tableRows = document.querySelectorAll("#drugList tbody tr");
     tableRows.forEach(row => {
-      if (row.cells[0].textContent === medicine) {
+      const drugNameSpan = row.querySelector("td span");
+      if (drugNameSpan && drugNameSpan.textContent === medicine) {
         row.style.display = "none";
         hiddenRows.push(row);
       }
@@ -99,6 +100,8 @@ function addToCart(medicine, price, brand) {
 }
 
 
+
+
 function removeFromCart(medicine) {
   let itemIndex = cart.findIndex(item => item.medicine === medicine);
   if (itemIndex !== -1) {
@@ -106,57 +109,127 @@ function removeFromCart(medicine) {
 
     // Unhide rows in the search list with same name as removed item
     hiddenRows.forEach(row => {
-      if (row.cells[0].textContent === medicine) {
+      const drugNameSpan = row.cells[0].querySelector("span:first-child");
+      if (drugNameSpan.textContent === medicine) {
         row.style.display = "";
       }
     });
-    hiddenRows = hiddenRows.filter(row => row.cells[0].textContent !== medicine);
+    hiddenRows = hiddenRows.filter(row => {
+      const drugNameSpan = row.cells[0].querySelector("span:first-child");
+      return drugNameSpan.textContent !== medicine;
+    });
   }
   showCart();
 }
 
 
 
+// function populateDrugTable() {
+//   const tableBody = document.querySelector("#drugList tbody");
+
+//   drugs.forEach(drug => {
+
+//     const row = document.createElement("tr"); //first row
+//     const nameCell = document.createElement("td");
+//     nameCell.textContent = drug.drugName;
+//     row.appendChild(nameCell);
+
+//     const brandCell = document.createElement("td");
+//     brandCell.textContent = drug.drugBrand; // add brand text to cell
+//     brandCell.style.verticalAlign = "center";
+//     brandCell.style.fontSize = "12px";
+//     brandCell.style.textAlign = "center";
+//     brandCell.style.lineHeight = "1.5";
+//     row.appendChild(brandCell);
+
+//     const doseQuantityCell = document.createElement("td");
+
+//     const doseQuantityInput = document.createElement("input");
+//     doseQuantityInput.type = "number";
+//     doseQuantityInput.min = "1";
+//     doseQuantityInput.value = drug.drugDoseQuantity;
+//     // doseQuantityInput.style.maxWidth = "40px"; // set max-width property
+//     // doseQuantityInput.style.height = "22px"; // set height property
+//     // doseQuantityInput.style.fontSize = "14px"; // set font-size property
+//     // doseQuantityInput.style.textAlign = "center"; // set font-align to centre
+//     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
+
+
+//     // Add drugDoseQuantity input to cell
+//     doseQuantityCell.appendChild(doseQuantityInput);
+
+//     row.appendChild(doseQuantityCell);
+
+//     const doseFrequencyCell = document.createElement("td");
+//     const doseFrequencySelect = document.createElement("select");
+//     frequencyOptions.forEach(option => {
+//       const optionElement = document.createElement("option");
+//       optionElement.value = option.value;
+//       optionElement.text = option.label;
+//       doseFrequencySelect.add(optionElement);
+//     });
+//     // doseFrequencySelect.style.maxWidth = "160px"; // set max-width property
+//     // doseFrequencySelect.style.height = "28px"; // set height property
+//     // doseFrequencySelect.style.verticalAlign = "top";
+
+//     doseFrequencySelect.value = drug.drugDoseFrequencyFactor;
+//     doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, doseFrequencySelect.value));
+//     doseFrequencyCell.appendChild(doseFrequencySelect);
+//     row.appendChild(doseFrequencyCell);
+
+//     const actionCell = document.createElement("td");
+//     const addButton = document.createElement("button");
+//     addButton.textContent = "Add";
+//     addButton.classList.add("add-button"); // button colour
+//     addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
+//     actionCell.appendChild(addButton);
+//     row.appendChild(actionCell);
+
+//     tableBody.appendChild(row);
+//   });
+// }
+
 
 function populateDrugTable() {
   const tableBody = document.querySelector("#drugList tbody");
 
   drugs.forEach(drug => {
-
-    const row = document.createElement("tr"); //first row
+    const row = document.createElement("tr");
+    
     const nameCell = document.createElement("td");
-    nameCell.textContent = drug.drugName;
+    const nameSpan = document.createElement("span");
+    const brandSpan = document.createElement("span");
+
+    nameSpan.textContent = drug.drugName;
+    brandSpan.textContent = drug.drugBrand;
+    brandSpan.style.fontSize = "12px";
+    brandSpan.style.display = "block"; // make brandSpan a block element
+    nameCell.appendChild(nameSpan);
+    nameCell.appendChild(brandSpan);
     row.appendChild(nameCell);
 
-    const brandCell = document.createElement("td");
-
-    const brandText = document.createTextNode(drug.drugBrand);
-
-
-    brandCell.appendChild(brandText);
-    brandCell.style.verticalAlign = "center";
-    brandCell.style.fontSize = "12px"; // set font-size 
-    brandCell.style.textAlign = "center"; // set font-align to centre
-    brandCell.style.lineHeight = "1.5";
-
-    row.appendChild(brandCell);
-
     const doseQuantityCell = document.createElement("td");
+    doseQuantityCell.style.width = "180px"; // set a fixed width for the cell
+
 
     const doseQuantityInput = document.createElement("input");
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
     doseQuantityInput.value = drug.drugDoseQuantity;
-    doseQuantityInput.style.maxWidth = "40px"; // set max-width property
-    doseQuantityInput.style.height = "22px"; // set height property
-    doseQuantityInput.style.fontSize = "14px"; // set font-size property
-    doseQuantityInput.style.textAlign = "center"; // set font-align to centre
+    doseQuantityInput.style.maxWidth = "40px";
     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
 
+    const doseUnitSpan = document.createElement("span");
+    doseUnitSpan.textContent = drug.drugDoseUnit;
 
-    // Add drugDoseQuantity input to cell
+    doseQuantityCell.style.fontSize = "14px";
+    doseQuantityCell.style.textAlign = "left";
+    doseQuantityCell.style.lineHeight = "1.5";
+
+    doseQuantityCell.appendChild(document.createTextNode("Take "));
     doseQuantityCell.appendChild(doseQuantityInput);
-
+    doseQuantityCell.appendChild(document.createTextNode("\u00a0")); // add a non-breaking space
+    doseQuantityCell.appendChild(doseUnitSpan);
     row.appendChild(doseQuantityCell);
 
     const doseFrequencyCell = document.createElement("td");
@@ -167,9 +240,6 @@ function populateDrugTable() {
       optionElement.text = option.label;
       doseFrequencySelect.add(optionElement);
     });
-    doseFrequencySelect.style.maxWidth = "160px"; // set max-width property
-    doseFrequencySelect.style.height = "28px"; // set height property
-    doseFrequencySelect.style.verticalAlign = "top";
 
     doseFrequencySelect.value = drug.drugDoseFrequencyFactor;
     doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, doseFrequencySelect.value));
@@ -179,8 +249,8 @@ function populateDrugTable() {
     const actionCell = document.createElement("td");
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
-    addButton.classList.add("add-button"); // button colour
-    addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice));
+    addButton.classList.add("add-button");
+    addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
     actionCell.appendChild(addButton);
     row.appendChild(actionCell);
 
@@ -206,8 +276,9 @@ function showCart() {
     const frequencyLabel = frequencyOption ? frequencyOption.label : '';
     medicine.innerHTML = `${item.medicine}<br><span style="font-size: smaller">${dose}${frequencyLabel}</span>`;
     row.appendChild(medicine);
+
     let brand = document.createElement("td");
-    brand.textContent = drug.drugBrand;
+    brand.textContent = item.brand;
     row.appendChild(brand);
     let price = document.createElement("td");
     const totalQuantity = drug.drugDoseQuantity * parseInt(drug.drugDoseFrequencyFactor.charAt(0)) * drug.drugMinOrderQty;
@@ -251,69 +322,48 @@ showCart();
 }
 
 
-// function searchDrugs() {
-//   var input, filter, table, tr, tdName, tdBrand, i, txtValueName, txtValueBrand;
-//   input = document.getElementById("searchBar");
-//   filter = input.value.toUpperCase();
-//   table = document.getElementById("drugList");
-//   tr = table.getElementsByTagName("tr");
-
-//   for (i = 0; i < tr.length; i++) {
-//     if (i === 0) {
-//       continue;
-//     }
-//     tdName = tr[i].getElementsByTagName("td")[0];
-//     tdBrand = tr[i].getElementsByTagName("td")[1];
-//     if (tdName && tdBrand) {
-//       txtValueName = tdName.textContent || tdName.innerText;
-//       txtValueBrand = tdBrand.textContent || tdBrand.innerText;
-//       const isInCart = cart.some(item => item.medicine === txtValueName);
-//       if ((txtValueName.toUpperCase().indexOf(filter) > -1 || txtValueBrand.toUpperCase().indexOf(filter) > -1) && !isInCart) {
-//         tr[i].style.display = "";
-//       } else {
-//         tr[i].style.display = "none";
-//       }
-//     }
-//   }
-// }
-
 //more advanced serach function
 
 function searchDrugs() {
-  var input, filter, table, tr, tdName, tdBrand, i, txtValueName, txtValueBrand, words;
-  input = document.getElementById("searchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("drugList");
-  tr = table.getElementsByTagName("tr");
-  words = filter.split(" ").filter(w => w.length > 0);
+  const searchBar = document.getElementById("searchBar");
+  const searchText = searchBar.value.trim().toLowerCase();
+  const tableRows = document.querySelectorAll("#drugList tbody tr");
 
-  for (i = 0; i < tr.length; i++) {
-    if (i === 0) {
-      continue;
-    }
-    tdName = tr[i].getElementsByTagName("td")[0];
-    tdBrand = tr[i].getElementsByTagName("td")[1];
-    if (tdName && tdBrand) {
-      txtValueName = tdName.textContent || tdName.innerText;
-      txtValueBrand = tdBrand.textContent || tdBrand.innerText;
-      const isInCart = cart.some(item => item.medicine === txtValueName);
-      if (words.every(word => (txtValueName.toUpperCase().indexOf(word) > -1 || txtValueBrand.toUpperCase().indexOf(word) > -1)) && !isInCart) {
-        tr[i].style.display = "";
+  tableRows.forEach(row => {
+    const drugNameSpan = row.cells[0].querySelector("span:first-child");
+    const drugBrandSpan = row.cells[0].querySelector("span:last-child");
+    const drugName = drugNameSpan.textContent.toLowerCase();
+    const drugBrand = drugBrandSpan.textContent.toLowerCase();
+    const isInCart = cart.some(item => item.medicine.toLowerCase() === drugName);
+
+    const searchWords = searchText.split(' ');
+
+    const isMatch = searchWords.every(word => drugName.includes(word) || drugBrand.includes(word));
+
+    if (!isInCart) {
+      if (searchText && !isMatch) {
+        row.style.display = "none";
       } else {
-        tr[i].style.display = "none";
+        row.style.display = "";
       }
+    } else {
+      row.style.display = "none";
     }
-  }
+  });
 }
 
 
 function clearSearch() {
   const tableRows = document.querySelectorAll("#drugList tbody tr");
   tableRows.forEach(row => {
-    const drugName = row.cells[0].textContent;
+    const drugNameSpan = row.cells[0].querySelector("span:first-child");
+    const drugName = drugNameSpan.textContent;
     const isInCart = cart.some(item => item.medicine === drugName);
-    if (!isInCart) {
+    const isHidden = hiddenRows.some(hiddenRow => hiddenRow === row);
+    if (!isInCart && !isHidden) {
       row.style.display = "";
+    } else {
+      row.style.display = "none"; // Hide the row if the item is in the cart or in hiddenRows
     }
   });
   document.getElementById("searchBar").value = "";
@@ -321,6 +371,7 @@ function clearSearch() {
 
 
 // Initialize cart and show cart contents
+
 
 document.addEventListener("DOMContentLoaded", function () {
 populateDrugTable();
