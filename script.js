@@ -59,7 +59,7 @@ function getCartTotalQuantity() {
 function getCartTotalPrice() {
   let total = 0;
   cart.forEach(item => {
-    const drug = drugs.find(d => d.drugName === item.medicine);
+    const drug = drugs.find(d => d.drugName === item.medicine && d.drugBrand === item.brand);
     const quantity = item.quantity;
     const frequency = parseInt(drug.drugDoseFrequencyFactor.charAt(0));
     const price = drug.drugPrice * drug.drugDoseQuantity * frequency * drug.drugMinOrderQty;
@@ -67,6 +67,7 @@ function getCartTotalPrice() {
   });
   return total.toFixed(2);
 }
+
 
 
 function addToCart(medicine, price, brand) {
@@ -206,8 +207,8 @@ function populateDrugTable() {
 
 
     const actionCell = document.createElement("td");
-    actionCell.style.width = "20px"; // set a fixed width for the cell
-    actionCell.style.textAlign = "right"; // set a fixed width for the cell
+    actionCell.style.width = "5px"; // set a fixed width for the cell
+    actionCell.style.textAlign = "center"; // set a fixed width for the cell
 
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
