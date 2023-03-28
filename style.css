@@ -40,6 +40,12 @@ html, body {
 
 }
 
+@media only screen and (max-width: 600px) {
+  .drug-table-container {
+      padding: 5px; /* Adjust this value to your preference */
+  }
+}
+
 
 .drug-row:hover {
   background-color: #f5f5f5;
@@ -120,6 +126,7 @@ td {
   position: relative;
   font-size: 15px; /* decrease font size of Medication Names*/
   position: relative;
+  border: solid; /*cell borders*/
 }
 
 /* Decrease font size for mobile screens */
