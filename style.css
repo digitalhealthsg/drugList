@@ -27,7 +27,18 @@ html, body {
   flex-direction: column;
   overflow-y: auto;
   padding-bottom: 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+
+/* Add this media query for screens larger than 600px */
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 500px;
+  }
+}
+
 
 .drug-table-container {
   padding: 15px;
