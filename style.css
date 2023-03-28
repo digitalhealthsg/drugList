@@ -100,7 +100,7 @@ table {
 }
 
 table tr:first-child th {
-  font-size: 14px;
+  font-size: 14px; /* decrease font size of Table Header*/
 }
 
 th {
@@ -116,18 +116,40 @@ th {
 
 
 td {
-  padding: 10px;
+  padding: 8px;
   position: relative;
   font-size: 15px; /* decrease font size of Medication Names*/
+  position: relative;
 }
 
 /* Decrease font size for mobile screens */
 @media only screen and (max-width: 600px) {
   td {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
+.dose-quantity-cell {
+  width: 250px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+  .dose-quantity-cell {
+    font-size: 12px; /* Adjust the font size for mobile screens */
+  }
+}
+
+
+.dose-pickers{
+  font-family: Geneva;  /* Adjust the font size for Dosage pickers */
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #55608f;
+}
 
 .add-button, .remove {
   border: none;
@@ -145,6 +167,6 @@ td {
 }
 
 .add-button {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 

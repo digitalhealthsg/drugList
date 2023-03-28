@@ -4,7 +4,7 @@ let drugs = [];
 let hiddenRows = [];
 
 // Parse CSV file and convert to array of objects
-Papa.parse("https://099a9f3d-7218-4373-b1f1-bae69f5b1a92.usrfiles.com/ugd/099a9f_951399d95857433a9f03a2eb1b0f97eb.csv", {
+Papa.parse("drugs.csv", {
   header: ["drugName", "drugBrand", "drugDoseQuantity", "drugDoseUnit", "drugDoseFrequencyFactor", "drugPrice", "drugMinOrderQty"],
   download: true,
   complete: function(results) {
@@ -162,17 +162,16 @@ function populateDrugTable() {
 
     // Creating the Dosage Table Cell (1 Column) + Styling
     const doseQuantityCell = document.createElement("td");
-    doseQuantityCell.style.width = "250px"; // set a fixed width for the cell
-    doseQuantityCell.style.fontSize = "14px";
-    doseQuantityCell.style.textAlign = "left";
-    doseQuantityCell.style.lineHeight = "1.5";
+    doseQuantityCell.classList.add("dose-quantity-cell");
+
 
     // Dose Quantity Input Field (Picker)
     const doseQuantityInput = document.createElement("input");
+    doseQuantityInput.classList.add("dose-pickers");
+    doseQuantityInput.style.maxWidth = "40px";
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
     doseQuantityInput.value = drug.drugDoseQuantity;
-    doseQuantityInput.style.maxWidth = "40px";
     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
     
     // Dose Units (e.g. Tablets/Capsules)
@@ -181,6 +180,7 @@ function populateDrugTable() {
     
     // Dose Frequency Drop-down Picker (e.g. Daily / Every Morning)
     const doseFrequencySelect = document.createElement("select");
+    doseFrequencySelect.classList.add("dose-pickers");
     doseFrequencySelect.style.height = "22px";
 
     frequencyOptions.forEach(option => {
@@ -206,14 +206,15 @@ function populateDrugTable() {
 
 
     const actionCell = document.createElement("td");
-    actionCell.style.width = "15px"; // set a fixed width for the cell
+    actionCell.style.width = "20px"; // set a fixed width for the cell
     actionCell.style.textAlign = "right"; // set a fixed width for the cell
 
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
     addButton.classList.add("add-button");
+
+
     addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
-    actionCell.rowSpan = 1; // set the action cell to span 2 rows
     actionCell.appendChild(addButton);
     row.appendChild(actionCell);
 
@@ -254,6 +255,9 @@ function showCart() {
     // row.appendChild(price);
 
     let remove = document.createElement("td");
+    remove.style.textAlign = "right"; // set a fixed width for the cell
+    remove.style.width = "10px"; // set a fixed width for the cell
+
     let removeButton = document.createElement("button");
     removeButton.classList.add("remove");
     removeButton.textContent = "Remove";
