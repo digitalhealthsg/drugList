@@ -9,12 +9,6 @@ html, body {
   font-weight: 100;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* Container styles */
-
 .container {
   position: relative;
   max-width: 500px;
@@ -31,11 +25,11 @@ html, body {
   box-sizing: border-box;
 }
 
-
-/* Add this media query for screens larger than 600px */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   .container {
-    width: 500px;
+    max-width: 98%; /* Change max-width value for smaller screens */
+    padding: 5px; /* Reduce padding for smaller screens */
+    margin: 5px auto; /* Reduce margin for smaller screens */
   }
 }
 
@@ -113,26 +107,21 @@ th {
   border-bottom: 2px solid #fff;
 }
 
+
+
 td {
   padding: 10px;
   position: relative;
   font-size: 15px; /* decrease font size of Medication Names*/
 }
 
-/*tbody tr:hover {
-  background-color: #f5f5f5;
+/* Decrease font size for mobile screens */
+@media only screen and (max-width: 600px) {
+  td {
+    font-size: 12px;
+  }
 }
 
-tbody td:hover:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -9999px;
-  bottom: -9999px;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: -1;
-}*/
 
 .add-button, .remove {
   border: none;
@@ -153,52 +142,3 @@ tbody td:hover:before {
   margin-right: 10px;
 }
 
-
-/* Card styles */
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-.card h3 {
-  font-size: 16px;
-  margin: 0 0 10px 0;
-}
-
-.card p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.card .add-button {
-  align-self: flex-end;
-  margin-top: auto;
-}
-
-@media only screen and (max-width: 768px) {
-  .card {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .card h3 {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
-  .card p {
-    font-size: 12px;
-    margin-right: 10px;
-  }
-
-  .card .add-button {
-    margin-top: 0;
-  }
-}
-*/

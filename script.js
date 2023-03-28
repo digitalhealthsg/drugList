@@ -162,7 +162,7 @@ function populateDrugTable() {
 
     // Creating the Dosage Table Cell (1 Column) + Styling
     const doseQuantityCell = document.createElement("td");
-    doseQuantityCell.style.width = "200px"; // set a fixed width for the cell
+    doseQuantityCell.style.width = "250px"; // set a fixed width for the cell
     doseQuantityCell.style.fontSize = "14px";
     doseQuantityCell.style.textAlign = "left";
     doseQuantityCell.style.lineHeight = "1.5";
@@ -206,14 +206,14 @@ function populateDrugTable() {
 
 
     const actionCell = document.createElement("td");
-    actionCell.style.width = "50px"; // set a fixed width for the cell
-    actionCell.style.textAlign = "left"; // set a fixed width for the cell
+    actionCell.style.width = "15px"; // set a fixed width for the cell
+    actionCell.style.textAlign = "right"; // set a fixed width for the cell
 
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
     addButton.classList.add("add-button");
     addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
-    actionCell.rowSpan = 2; // set the action cell to span 2 rows
+    actionCell.rowSpan = 1; // set the action cell to span 2 rows
     actionCell.appendChild(addButton);
     row.appendChild(actionCell);
 
