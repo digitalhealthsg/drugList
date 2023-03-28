@@ -169,9 +169,10 @@ function populateDrugTable() {
     // Dose Quantity Input Field (Picker)
     const doseQuantityInput = document.createElement("input");
     doseQuantityInput.classList.add("dose-pickers");
-    doseQuantityInput.style.maxWidth = "40px";
+    doseQuantityInput.style.maxWidth = "25px";
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
+    doseQuantityInput.max = "9";
     doseQuantityInput.value = drug.drugDoseQuantity;
     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
     
@@ -182,6 +183,7 @@ function populateDrugTable() {
     // Dose Frequency Drop-down Picker (e.g. Daily / Every Morning)
     const doseFrequencySelect = document.createElement("select");
     doseFrequencySelect.classList.add("dose-pickers");
+    doseFrequencySelect.style.maxWidth = "115px";
     doseFrequencySelect.style.height = "22px";
 
     frequencyOptions.forEach(option => {
@@ -195,11 +197,11 @@ function populateDrugTable() {
     
 
     // Creating the Cell Structure 
-    doseQuantityCell.appendChild(document.createTextNode("Take \u00a0"));
+    doseQuantityCell.appendChild(document.createTextNode("Take "));
     doseQuantityCell.appendChild(doseQuantityInput);
     doseQuantityCell.appendChild(document.createTextNode("\u00a0")); // add a non-breaking space
     doseQuantityCell.appendChild(doseUnitSpan);
-    doseQuantityCell.appendChild(document.createTextNode("\u00a0\u00a0\u00a0")); // add a non-breaking space
+    doseQuantityCell.appendChild(document.createTextNode("\u00a0")); // add a non-breaking space
     doseQuantityCell.appendChild(doseFrequencySelect);
 
     // Appending to a new Row in Table
@@ -207,8 +209,8 @@ function populateDrugTable() {
 
 
     const actionCell = document.createElement("td");
-    actionCell.style.width = "5px"; // set a fixed width for the cell
-    actionCell.style.textAlign = "center"; // set a fixed width for the cell
+    actionCell.classList.add("action-cell");
+
 
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
