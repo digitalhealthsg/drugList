@@ -4,7 +4,7 @@ let drugs = [];
 let hiddenRows = [];
 
 // Parse CSV file and convert to array of objects
-Papa.parse("https://github.com/digitalhealthsg/drugList/blob/cc66c33417acb7cbe08dda58dbbe1d76ab647a76/drugs.csv", {
+Papa.parse("https://raw.githubusercontent.com/digitalhealthsg/drugList/cc66c33417acb7cbe08dda58dbbe1d76ab647a76/drugs.csv", {
   header: ["drugName", "drugBrand", "drugDoseQuantity", "drugDoseUnit", "drugDoseFrequencyFactor", "drugPrice", "drugMinOrderQty"],
   download: true,
   complete: function(results) {
