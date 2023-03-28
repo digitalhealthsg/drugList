@@ -12,8 +12,9 @@
   </head>
   <body>
     <div class="container">
-      <h2 align="center">Monthly Price Checker</h2>
-        <p align="center"><small>Free delivery. No consult fees. Transparent Pricing. </small></p>
+      <h2 class="title" align="center">Monthly Price Checker</h2>
+      <p class="subtitle" align="center"><small>Transparent Pricing. No consult fees. Free delivery* </small></p>
+
       <input type="text" id="searchBar" onkeyup="searchDrugs()" placeholder="Search for medicine...">
 
 
@@ -21,27 +22,22 @@
 
       <table id="drugList">
 
-        <thead>
-<!--           <tr>
-            <th>Medication</th>
-          </tr> -->
-        </thead>
-        <thead id="drugListHeader" style="display: none;">
+<!--         <thead>
           <tr>
-            <th>Medication</th>
+            <th>Medications</th>
           </tr>
-        </thead>
+        </thead> -->
         <tbody>
         </tbody>
       </table>
       </div>
 
       <div id="cart">
-        <h3>Cart</h3>
+        <h4>Cart</h4>
         <table>
           <thead>
             <tr>
-              <th>Medication</th>
+              <th>My Chronic Medications</th>
               <th>Brand</th>
               <th></th>
             </tr>
@@ -50,9 +46,10 @@
           </tbody>
         </table>
         <div id="total">
-          <p>Total Quantity: <span id="totalQuantity">0</span></p>
+          <!-- <p>Total Quantity: <span id="totalQuantity">0</span></p> -->
           <p>Total Price: <span id="totalPrice">$0.00</span></p>
         </div>
+        <p class="subclause" align="right">*Free delivery for combined orders above $30</p>
       </div>
     </div>
   </body>

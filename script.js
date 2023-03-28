@@ -36,12 +36,12 @@ const frequencyOptions = [
   { label: "4 times/day", value: "4a" },
   { label: "5 times/day", value: "5a" },
   { label: "Use as instructed", value: "1f" },
-  { label: "Weekly", value: "1g" },
-  { label: "2 times/week", value: "2b" },
-  { label: "3 times/week", value: "3c" },
-  { label: "4 times/week", value: "4d" },
-  { label: "5 times/week", value: "5e" },
-  { label: "Every other day", value: "1h" },
+  { label: "Weekly", value: "0.143g" },
+  { label: "2 times/week", value: "0.2852b" },
+  { label: "3 times/week", value: "0.429c" },
+  { label: "4 times/week", value: "0.571d" },
+  { label: "5 times/week", value: "0.714e" },
+  { label: "Every other day", value: "0.5h" },
 ];
 
 // Function to calculate total quantity of drugs in cart
@@ -61,7 +61,8 @@ function getCartTotalPrice() {
   cart.forEach(item => {
     const drug = drugs.find(d => d.drugName === item.medicine && d.drugBrand === item.brand);
     const quantity = item.quantity;
-    const frequency = parseInt(drug.drugDoseFrequencyFactor.charAt(0));
+    const frequencyString = drug.drugDoseFrequencyFactor.slice(0, -1); // Remove the last character
+    const frequency = parseFloat(frequencyString); // Convert to a double (float)
     const price = drug.drugPrice * drug.drugDoseQuantity * frequency * drug.drugMinOrderQty;
     total += price * quantity;
   });
@@ -135,11 +136,11 @@ function populateDrugTable() {
 
     // create the first row of the drug table
     const nameRow = document.createElement("tr");
-    nameRow.classList.add("drug-row");
+    nameRow.classList.add("drug-name-row");
     
     const nameCell = document.createElement("td");
     nameCell.colSpan = 3; // set the name cell to span 2 columns
-    nameCell.style.backgroundColor = "#f5f5f5";
+    // nameCell.style.backgroundColor = "rgba(85, 96, 143, 0)";
 
     
     const nameSpan = document.createElement("span");
@@ -159,7 +160,7 @@ function populateDrugTable() {
 
     // create the second row of the drug table
     const row = document.createElement("tr");
-    row.classList.add("drug-row");
+    row.classList.add("drug-frequency-row");
 
     // Creating the Dosage Table Cell (1 Column) + Styling
     const doseQuantityCell = document.createElement("td");
@@ -244,7 +245,7 @@ function showCart() {
     const dose = `Take ${drug.drugDoseQuantity} Tablet(s) `;
     const frequencyOption = frequencyOptions.find(option => option.value === drug.drugDoseFrequencyFactor);
     const frequencyLabel = frequencyOption ? frequencyOption.label : '';
-    medicine.innerHTML = `${item.medicine}<br><span style="font-size: smaller">${dose}${frequencyLabel}</span>`;
+    medicine.innerHTML = `${item.medicine}<br><span style="font-size: 12px">${dose}${frequencyLabel}</span>`;
     row.appendChild(medicine);
 
     let brand = document.createElement("td");
