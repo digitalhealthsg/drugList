@@ -80,19 +80,19 @@ function addToCart(medicine, price, brand) {
       // Add the item to the cart
       item = {
         medicine: medicine,
-        brand: brand, // add brand parameter to item object
+        brand: brand,
         quantity: 1,
         price: price
       };
       cart.push(item);
     }
     // Hide the row in the search list
-    const tableRows = document.querySelectorAll("#drugList tbody tr");
-    tableRows.forEach(row => {
-      const drugNameSpan = row.querySelector("td span");
+    const tableContainers = document.querySelectorAll("#drugList tbody .drug-table-container");
+    tableContainers.forEach(container => {
+      const drugNameSpan = container.querySelector("td span");
       if (drugNameSpan && drugNameSpan.textContent === medicine) {
-        row.style.display = "none";
-        hiddenRows.push(row);
+        container.style.display = "none";
+        hiddenRows.push(container);
       }
     });
     showCart();
@@ -107,15 +107,15 @@ function removeFromCart(medicine) {
   if (itemIndex !== -1) {
     cart.splice(itemIndex, 1);
 
-    // Unhide rows in the search list with same name as removed item
-    hiddenRows.forEach(row => {
-      const drugNameSpan = row.cells[0].querySelector("span:first-child");
+    // Unhide rows in the search list with the same name as the removed item
+    hiddenRows.forEach(container => {
+      const drugNameSpan = container.querySelector("td span");
       if (drugNameSpan.textContent === medicine) {
-        row.style.display = "";
+        container.style.display = "";
       }
     });
-    hiddenRows = hiddenRows.filter(row => {
-      const drugNameSpan = row.cells[0].querySelector("span:first-child");
+    hiddenRows = hiddenRows.filter(container => {
+      const drugNameSpan = container.querySelector("td span");
       return drugNameSpan.textContent !== medicine;
     });
   }
@@ -123,138 +123,104 @@ function removeFromCart(medicine) {
 }
 
 
-
-// function populateDrugTable() {
-//   const tableBody = document.querySelector("#drugList tbody");
-
-//   drugs.forEach(drug => {
-
-//     const row = document.createElement("tr"); //first row
-//     const nameCell = document.createElement("td");
-//     nameCell.textContent = drug.drugName;
-//     row.appendChild(nameCell);
-
-//     const brandCell = document.createElement("td");
-//     brandCell.textContent = drug.drugBrand; // add brand text to cell
-//     brandCell.style.verticalAlign = "center";
-//     brandCell.style.fontSize = "12px";
-//     brandCell.style.textAlign = "center";
-//     brandCell.style.lineHeight = "1.5";
-//     row.appendChild(brandCell);
-
-//     const doseQuantityCell = document.createElement("td");
-
-//     const doseQuantityInput = document.createElement("input");
-//     doseQuantityInput.type = "number";
-//     doseQuantityInput.min = "1";
-//     doseQuantityInput.value = drug.drugDoseQuantity;
-//     // doseQuantityInput.style.maxWidth = "40px"; // set max-width property
-//     // doseQuantityInput.style.height = "22px"; // set height property
-//     // doseQuantityInput.style.fontSize = "14px"; // set font-size property
-//     // doseQuantityInput.style.textAlign = "center"; // set font-align to centre
-//     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
-
-
-//     // Add drugDoseQuantity input to cell
-//     doseQuantityCell.appendChild(doseQuantityInput);
-
-//     row.appendChild(doseQuantityCell);
-
-//     const doseFrequencyCell = document.createElement("td");
-//     const doseFrequencySelect = document.createElement("select");
-//     frequencyOptions.forEach(option => {
-//       const optionElement = document.createElement("option");
-//       optionElement.value = option.value;
-//       optionElement.text = option.label;
-//       doseFrequencySelect.add(optionElement);
-//     });
-//     // doseFrequencySelect.style.maxWidth = "160px"; // set max-width property
-//     // doseFrequencySelect.style.height = "28px"; // set height property
-//     // doseFrequencySelect.style.verticalAlign = "top";
-
-//     doseFrequencySelect.value = drug.drugDoseFrequencyFactor;
-//     doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, doseFrequencySelect.value));
-//     doseFrequencyCell.appendChild(doseFrequencySelect);
-//     row.appendChild(doseFrequencyCell);
-
-//     const actionCell = document.createElement("td");
-//     const addButton = document.createElement("button");
-//     addButton.textContent = "Add";
-//     addButton.classList.add("add-button"); // button colour
-//     addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
-//     actionCell.appendChild(addButton);
-//     row.appendChild(actionCell);
-
-//     tableBody.appendChild(row);
-//   });
-// }
-
-
 function populateDrugTable() {
   const tableBody = document.querySelector("#drugList tbody");
 
   drugs.forEach(drug => {
-    const row = document.createElement("tr");
+    const container = document.createElement("div"); // create a container for each drug table
+    container.classList.add("drug-table-container");
+    
+    const table = document.createElement("table"); // create a separate table for each drug
+
+    // create the first row of the drug table
+    const nameRow = document.createElement("tr");
+    nameRow.classList.add("drug-row");
     
     const nameCell = document.createElement("td");
-    const nameSpan = document.createElement("span");
-    const brandSpan = document.createElement("span");
+    nameCell.colSpan = 3; // set the name cell to span 2 columns
+    nameCell.style.backgroundColor = "#f5f5f5";
 
+    
+    const nameSpan = document.createElement("span");
     nameSpan.textContent = drug.drugName;
+    nameSpan.style.fontWeight = "bold";
+
+    const brandSpan = document.createElement("span");
     brandSpan.textContent = drug.drugBrand;
     brandSpan.style.fontSize = "12px";
     brandSpan.style.display = "block"; // make brandSpan a block element
+
+    // create drug name + brand cell
     nameCell.appendChild(nameSpan);
     nameCell.appendChild(brandSpan);
-    row.appendChild(nameCell);
+    nameRow.appendChild(nameCell);
+    table.appendChild(nameRow);
 
+    // create the second row of the drug table
+    const row = document.createElement("tr");
+    row.classList.add("drug-row");
+
+    // Creating the Dosage Table Cell (1 Column) + Styling
     const doseQuantityCell = document.createElement("td");
-    doseQuantityCell.style.width = "180px"; // set a fixed width for the cell
+    doseQuantityCell.style.width = "200px"; // set a fixed width for the cell
+    doseQuantityCell.style.fontSize = "14px";
+    doseQuantityCell.style.textAlign = "left";
+    doseQuantityCell.style.lineHeight = "1.5";
 
-
+    // Dose Quantity Input Field (Picker)
     const doseQuantityInput = document.createElement("input");
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
     doseQuantityInput.value = drug.drugDoseQuantity;
     doseQuantityInput.style.maxWidth = "40px";
     doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
-
+    
+    // Dose Units (e.g. Tablets/Capsules)
     const doseUnitSpan = document.createElement("span");
     doseUnitSpan.textContent = drug.drugDoseUnit;
-
-    doseQuantityCell.style.fontSize = "14px";
-    doseQuantityCell.style.textAlign = "left";
-    doseQuantityCell.style.lineHeight = "1.5";
-
-    doseQuantityCell.appendChild(document.createTextNode("Take "));
-    doseQuantityCell.appendChild(doseQuantityInput);
-    doseQuantityCell.appendChild(document.createTextNode("\u00a0")); // add a non-breaking space
-    doseQuantityCell.appendChild(doseUnitSpan);
-    row.appendChild(doseQuantityCell);
-
-    const doseFrequencyCell = document.createElement("td");
+    
+    // Dose Frequency Drop-down Picker (e.g. Daily / Every Morning)
     const doseFrequencySelect = document.createElement("select");
+    doseFrequencySelect.style.height = "22px";
+
     frequencyOptions.forEach(option => {
       const optionElement = document.createElement("option");
       optionElement.value = option.value;
       optionElement.text = option.label;
       doseFrequencySelect.add(optionElement);
     });
-
     doseFrequencySelect.value = drug.drugDoseFrequencyFactor;
     doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, doseFrequencySelect.value));
-    doseFrequencyCell.appendChild(doseFrequencySelect);
-    row.appendChild(doseFrequencyCell);
+    
+
+    // Creating the Cell Structure 
+    doseQuantityCell.appendChild(document.createTextNode("Take \u00a0"));
+    doseQuantityCell.appendChild(doseQuantityInput);
+    doseQuantityCell.appendChild(document.createTextNode("\u00a0")); // add a non-breaking space
+    doseQuantityCell.appendChild(doseUnitSpan);
+    doseQuantityCell.appendChild(document.createTextNode("\u00a0\u00a0\u00a0")); // add a non-breaking space
+    doseQuantityCell.appendChild(doseFrequencySelect);
+
+    // Appending to a new Row in Table
+    row.appendChild(doseQuantityCell);
+
 
     const actionCell = document.createElement("td");
+    actionCell.style.width = "50px"; // set a fixed width for the cell
+    actionCell.style.textAlign = "left"; // set a fixed width for the cell
+
     const addButton = document.createElement("button");
     addButton.textContent = "Add";
     addButton.classList.add("add-button");
     addButton.addEventListener("click", () => addToCart(drug.drugName, drug.drugPrice, drug.drugBrand));
+    actionCell.rowSpan = 2; // set the action cell to span 2 rows
     actionCell.appendChild(addButton);
     row.appendChild(actionCell);
 
-    tableBody.appendChild(row);
+    table.appendChild(row);
+
+    container.appendChild(table);
+    tableBody.appendChild(container);
   });
 }
 
@@ -280,11 +246,13 @@ function showCart() {
     let brand = document.createElement("td");
     brand.textContent = item.brand;
     row.appendChild(brand);
-    let price = document.createElement("td");
-    const totalQuantity = drug.drugDoseQuantity * parseInt(drug.drugDoseFrequencyFactor.charAt(0)) * drug.drugMinOrderQty;
-    const totalPrice = drug.drugPrice * totalQuantity;
-    price.textContent = "$" + totalPrice.toFixed(2);
-    row.appendChild(price);
+
+    // let price = document.createElement("td");
+    // const totalQuantity = drug.drugDoseQuantity * parseInt(drug.drugDoseFrequencyFactor.charAt(0)) * drug.drugMinOrderQty;
+    // const totalPrice = drug.drugPrice * totalQuantity;
+    // price.textContent = "$" + totalPrice.toFixed(2);
+    // row.appendChild(price);
+
     let remove = document.createElement("td");
     let removeButton = document.createElement("button");
     removeButton.classList.add("remove");
@@ -323,15 +291,14 @@ showCart();
 
 
 //more advanced serach function
-
 function searchDrugs() {
   const searchBar = document.getElementById("searchBar");
   const searchText = searchBar.value.trim().toLowerCase();
-  const tableRows = document.querySelectorAll("#drugList tbody tr");
+  const tableContainers = document.querySelectorAll("#drugList tbody .drug-table-container");
 
-  tableRows.forEach(row => {
-    const drugNameSpan = row.cells[0].querySelector("span:first-child");
-    const drugBrandSpan = row.cells[0].querySelector("span:last-child");
+  tableContainers.forEach(container => {
+    const drugNameSpan = container.querySelector("td span:first-child");
+    const drugBrandSpan = container.querySelector("td span:last-child");
     const drugName = drugNameSpan.textContent.toLowerCase();
     const drugBrand = drugBrandSpan.textContent.toLowerCase();
     const isInCart = cart.some(item => item.medicine.toLowerCase() === drugName);
@@ -342,33 +309,33 @@ function searchDrugs() {
 
     if (!isInCart) {
       if (searchText && !isMatch) {
-        row.style.display = "none";
+        container.style.display = "none";
       } else {
-        row.style.display = "";
+        container.style.display = "";
       }
     } else {
-      row.style.display = "none";
+      container.style.display = "none";
     }
   });
 }
 
 
 function clearSearch() {
-  const tableRows = document.querySelectorAll("#drugList tbody tr");
-  tableRows.forEach(row => {
-    const drugNameSpan = row.cells[0].querySelector("span:first-child");
+  const tableContainers = document.querySelectorAll("#drugList tbody .drug-table-container");
+  tableContainers.forEach(container => {
+    const drugNameSpan = container.querySelector("td span:first-child");
     const drugName = drugNameSpan.textContent;
     const isInCart = cart.some(item => item.medicine === drugName);
-    const isHidden = hiddenRows.some(hiddenRow => hiddenRow === row);
+    const isHidden = hiddenRows.some(hiddenRow => hiddenRow === container);
+
     if (!isInCart && !isHidden) {
-      row.style.display = "";
+      container.style.display = "";
     } else {
-      row.style.display = "none"; // Hide the row if the item is in the cart or in hiddenRows
+      container.style.display = "none"; // Hide the container if the item is in the cart or in hiddenRows
     }
   });
   document.getElementById("searchBar").value = "";
 }
-
 
 // Initialize cart and show cart contents
 
