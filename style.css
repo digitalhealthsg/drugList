@@ -126,7 +126,6 @@ td {
   position: relative;
   font-size: 15px; /* decrease font size of Medication Names*/
   position: relative;
-  border: solid; /*cell borders*/
 }
 
 /* Decrease font size for mobile screens */
