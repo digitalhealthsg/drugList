@@ -169,6 +169,7 @@ function populateDrugTable() {
     // Dose Quantity Input Field (Picker)
     const doseQuantityInput = document.createElement("input");
     doseQuantityInput.classList.add("dose-pickers");
+    doseQuantityInput.style.width = "30px";
     doseQuantityInput.style.maxWidth = "25px";
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
