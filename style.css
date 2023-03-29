@@ -16,18 +16,19 @@ html, body {
 .title {
 
   margin-bottom: 0; /* Reduces the margin below the h2 element */
-  padding: 10px;
+  padding-bottom: 16px;
   font-weight: bold;
   font-size: 35px;
 }
 
 .subtitle {
+  font-size: 14px;
   margin-top: 0; /* Reduces the margin above the p element */
 }
 
 
 .title, .subtitle {
-  color: #61605d;
+  color: #f2f1e9 ;
 }
 
 .subclause {
@@ -43,7 +44,7 @@ html, body {
   max-width: 500px;
   margin: 20px auto;
   padding: 0px;
-  background-color: #f2f1e9;
+  background-color: #6e9489;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -122,7 +123,9 @@ html, body {
 
 
 #total {
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
 
   align-self: flex-end;
   margin-top: 0px;
@@ -138,6 +141,7 @@ html, body {
 
 .drugListContainer {
   max-height: 460px;
+  background-color: #f2f1e9;
   overflow-y: auto;
 }
 
@@ -152,18 +156,17 @@ html, body {
   height: 48px;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 15px;
   padding: 15px;
   padding-left: 35px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 #searchBar:focus {
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Change border color and size */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Change border color and size */
   outline: none; /* Remove default focus outline */
 }
 
@@ -253,7 +256,7 @@ td {
   border: none;
   background-color: rgba(110,148,137,255);
   color: #fff;
-  padding: 8px 12px;
+  padding: 8px 18px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
