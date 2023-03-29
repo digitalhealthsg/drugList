@@ -48,9 +48,7 @@ const frequencyOptions = [
 function getCartTotalQuantity() {
   let total = 0;
   cart.forEach(item => {
-    const drug = drugs.find(d => d.drugName === item.medicine);
-    const quantity = item.quantity;
-    total += quantity;
+    total += item.quantity;
   });
   return total;
 }
@@ -72,9 +70,9 @@ function getCartTotalPrice() {
 
 
 function addToCart(medicine, price, brand) {
-  let drug = drugs.find(d => d.drugName === medicine);
+  let drug = drugs.find(d => d.drugName === medicine && d.drugBrand === brand);
   if (drug) {
-    let item = cart.find(item => item.medicine === medicine);
+    let item = cart.find(item => item.medicine === medicine && item.brand === brand);
     if (item) {
       // Item already exists in the cart, update its quantity
       item.quantity++;
@@ -88,11 +86,12 @@ function addToCart(medicine, price, brand) {
       };
       cart.push(item);
     }
-    // Hide the row in the search list
+    // Hide the rows in the search list
     const tableContainers = document.querySelectorAll("#drugList tbody .drug-table-container");
     tableContainers.forEach(container => {
       const drugNameSpan = container.querySelector("td span");
-      if (drugNameSpan && drugNameSpan.textContent === medicine) {
+      const drugBrandSpan = container.querySelector("td span:last-child");
+      if (drugNameSpan && drugNameSpan.textContent === medicine) { // Update the condition here
         container.style.display = "none";
         hiddenRows.push(container);
       }
@@ -175,8 +174,8 @@ function populateDrugTable() {
     doseQuantityInput.min = "1";
     doseQuantityInput.max = "9";
     doseQuantityInput.value = drug.drugDoseQuantity;
-    doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, doseQuantityInput.value));
-    
+    doseQuantityInput.addEventListener("change", () => updateDoseQuantity(drug.drugName, drug.drugBrand, doseQuantityInput.value));
+
     // Dose Units (e.g. Tablets/Capsules)
     const doseUnitSpan = document.createElement("span");
     doseUnitSpan.textContent = drug.drugDoseUnit;
@@ -194,8 +193,7 @@ function populateDrugTable() {
       doseFrequencySelect.add(optionElement);
     });
     doseFrequencySelect.value = drug.drugDoseFrequencyFactor;
-    doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, doseFrequencySelect.value));
-    
+    doseFrequencySelect.addEventListener("change", () => updateDoseFrequencyFactor(drug.drugName, drug.drugBrand, doseFrequencySelect.value));
 
     // Creating the Cell Structure 
     doseQuantityCell.appendChild(document.createTextNode("Take "));
@@ -241,7 +239,7 @@ function showCart() {
   cart.forEach(item => {
     let row = document.createElement("tr");
     let medicine = document.createElement("td");
-    const drug = drugs.find(d => d.drugName === item.medicine);
+    const drug = drugs.find(d => d.drugName === item.medicine && d.drugBrand === item.brand);
     const dose = `Take ${drug.drugDoseQuantity} Tablet(s) `;
     const frequencyOption = frequencyOptions.find(option => option.value === drug.drugDoseFrequencyFactor);
     const frequencyLabel = frequencyOption ? frequencyOption.label : '';
@@ -251,12 +249,6 @@ function showCart() {
     let brand = document.createElement("td");
     brand.textContent = item.brand;
     row.appendChild(brand);
-
-    // let price = document.createElement("td");
-    // const totalQuantity = drug.drugDoseQuantity * parseInt(drug.drugDoseFrequencyFactor.charAt(0)) * drug.drugMinOrderQty;
-    // const totalPrice = drug.drugPrice * totalQuantity;
-    // price.textContent = "$" + totalPrice.toFixed(2);
-    // row.appendChild(price);
 
     let remove = document.createElement("td");
     remove.style.textAlign = "right"; // set a fixed width for the cell
@@ -280,21 +272,24 @@ function showCart() {
 }
 
 
-function updateQuantity(item, newQuantity) {
-item.quantity = newQuantity;
-showCart();
+function updateQuantity(medicine, brand, newQuantity) {
+  let item = cart.find(item => item.medicine === medicine && item.brand === brand);
+  if (item) {
+    item.quantity = newQuantity;
+    showCart();
+  }
 }
 
-function updateDoseQuantity(drugName, newDoseQuantity) {
-let drug = drugs.find(d => d.drugName === drugName);
-drug.drugDoseQuantity = newDoseQuantity;
-showCart();
+function updateDoseQuantity(drugName, brandName, newDoseQuantity) {
+  let drug = drugs.find(d => d.drugName === drugName && d.drugBrand === brandName);
+  drug.drugDoseQuantity = newDoseQuantity;
+  showCart();
 }
 
-function updateDoseFrequencyFactor(drugName, newDoseFrequencyFactor) {
-let drug = drugs.find(d => d.drugName === drugName);
-drug.drugDoseFrequencyFactor = newDoseFrequencyFactor;
-showCart();
+function updateDoseFrequencyFactor(drugName, brandName, newDoseFrequencyFactor) {
+  let drug = drugs.find(d => d.drugName === drugName && d.drugBrand === brandName);
+  drug.drugDoseFrequencyFactor = newDoseFrequencyFactor;
+  showCart();
 }
 
 
