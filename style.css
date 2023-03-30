@@ -15,22 +15,19 @@ html, body {
 
 
 .title {
-
   margin-bottom: 0; /* Reduces the margin below the h2 element */
   padding-bottom: 16px;
   font-weight: bold;
   font-size: 35px;
-}
-
-.subtitle {
-  font-size: 14px;
-  margin-top: 0; /* Reduces the margin above the p element */
-}
-
-
-.title, .subtitle {
   color: #f2f1e9 ;
 }
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
 
 .subclause {
   font-size: 10px;
@@ -38,6 +35,11 @@ html, body {
   padding-right: 20px;
 }
 
+@media only screen and (max-width: 450px) {
+  .subclause {
+  padding-right: 40px;
+  }
+}
 
 .container {
 /*  background: linear-gradient(120deg, rgba(36,46,56,255), rgb(92,187,187));*/
@@ -54,13 +56,18 @@ html, body {
   padding-bottom: 0px;
   width: 100%;
   box-sizing: border-box;
+
 }
 
 @media only screen and (max-width: 450px) {
   .container {
+    margin: 0px auto;
+    border-radius: 0px;
     max-width: 100%; /* Change max-width value for smaller screens */
     padding: 0px; /* Reduce padding for smaller screens */
-    margin: 5px auto; /* Reduce margin for smaller screens */
+    margin: 0px auto; /* Reduce margin for smaller screens */
+
+
   }
 }
 
@@ -86,9 +93,6 @@ html, body {
 
 /*Drug List Styles*/
 
-
-
-
 .drug-name-row {
   background-color: #dad9d2;
   color: #484845;
@@ -110,7 +114,11 @@ html, body {
 /* Total and Cart styles */
 
 #cart {
-  padding: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  
   color: #fefefd;
   background: linear-gradient(175deg, #6e9489, #6e9489);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -120,6 +128,16 @@ html, body {
   border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+@media only screen and (max-width: 450px) {
+  #cart {
+    padding: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 0;
+    width:100%;
+  }
+}
+
 
 
 
@@ -138,6 +156,16 @@ html, body {
   white-space: pre-line;
 }
 
+
+@media only screen and (max-width: 450px) {
+  #total {
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  }
+}
+
+
 /* Drug List styles */
 
 .drugListContainer {
@@ -148,9 +176,12 @@ html, body {
 
 @media only screen and (max-width: 450px) {
   .drugListContainer {
-    max-height: 250px; /* Adjust this value to your preference */
+       max-height: 385px; /* Adjust this value to your preference */
+
   }
 }
+
+
 
 #searchBar {
   width: 100%;
@@ -165,6 +196,14 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
+@media only screen and (max-width: 450px) {
+  #searchBar {
+      height: 40px;
+      font-size: 13px;
+
+  }
+}
+
 
 #searchBar:focus {
   border: 2px solid rgba(255, 255, 255, 0.2); /* Change border color and size */
