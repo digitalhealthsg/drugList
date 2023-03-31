@@ -22,7 +22,7 @@ html, body {
   color: #f2f1e9 ;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   .title {
     font-size: 25px;
   }
@@ -35,9 +35,9 @@ html, body {
   padding-right: 20px;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   .subclause {
-  padding-right: 40px;
+  padding-right: 30px;
   }
 }
 
@@ -59,7 +59,7 @@ html, body {
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   .container {
     margin: 0px auto;
     border-radius: 0px;
@@ -84,9 +84,12 @@ html, body {
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   .drug-table-container {
-      padding: 5px; /* Adjust this value to your preference */
+      padding-bottom: 5px; /* Adjust this value to your preference */
+      padding-top: 5px;
+      padding-left:10px;
+      padding-right: 10px;
   }
 }
 
@@ -117,7 +120,7 @@ html, body {
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  padding-top: 0px;
+  padding-top: 20px;
   
   color: #fefefd;
   background: linear-gradient(175deg, #6e9489, #6e9489);
@@ -129,12 +132,29 @@ html, body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (max-width: 450px) {
+
+
+#cart-title {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+}
+@media only screen and (max-width: 540px) {
+  #cart-title {
+      font-size: 13px;
+      padding-top: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
   #cart {
     padding: 0px;
-    border-bottom-left-radius: 0px;
+    padding-bottom: 5px;
     bottom: 0;
     width:100%;
+    border-top: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -157,11 +177,11 @@ html, body {
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   #total {
   padding-top: 20px;
-  padding-right: 40px;
-  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-bottom: 5px;
   }
 }
 
@@ -174,7 +194,7 @@ html, body {
   overflow-y: auto;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   .drugListContainer {
        max-height: 385px; /* Adjust this value to your preference */
 
@@ -196,7 +216,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   #searchBar {
       height: 40px;
       font-size: 13px;
@@ -227,17 +247,28 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  border-radius: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   color: #333;
 }
+@media only screen and (max-width: 540px) {
+  table {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  }
+}
+
 
 table tr:first-child th {
   font-size: 14px; /* decrease font size of Table Header*/
 }
 
+
 tr {
   color: rgba(65,67,74);
   background-color: rgba(255,255,255,0.8);
+
 }
 
 
@@ -250,6 +281,12 @@ th {
   top: 0;
   border-bottom: 0px solid #fff;
 }
+@media only screen and (max-width: 540px) {
+  th {
+  padding: 10px;
+
+  }
+}
 
 td {
   padding: 8px;
@@ -260,9 +297,8 @@ td {
 }
 
 /* Decrease font size for mobile screens */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 540px) {
   td {
-    padding: 5px;
     font-size: 13px;
   }
 }
@@ -274,7 +310,7 @@ td {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 540px) {
   .dose-quantity-cell {
     font-size: 12px; /* Adjust the font size for mobile screens */
   }
@@ -302,6 +338,12 @@ td {
   transition: all 0.2s ease-in-out;
   margin: 0; /* Make sure there's no margin */
 }
+@media screen and (max-width: 540px) {
+  .add-button {
+    padding: 6px 12px;
+  }
+}
+
 
 .action-cell {
   padding:5px;
@@ -319,6 +361,12 @@ td {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 540px) {
+  .remove {
+    padding: 5px 5px;
+  }
+}
+
 
 .add-button:hover, .remove:hover {
   background-color: #fff;
