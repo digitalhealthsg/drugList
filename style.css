@@ -46,7 +46,7 @@ html, body {
   position: relative;
   max-width: 500px;
   margin: 20px auto;
-  padding: 0px;
+  padding: 15px;
   background-color: #6e9489;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -61,10 +61,11 @@ html, body {
 
 @media only screen and (max-width: 540px) {
   .container {
+
     margin: 0px auto;
     border-radius: 0px;
     max-width: 100%; /* Change max-width value for smaller screens */
-    padding: 0px; /* Reduce padding for smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
     margin: 0px auto; /* Reduce margin for smaller screens */
 
 
@@ -75,8 +76,8 @@ html, body {
 .drug-table-container {
   border-radius: 0px;
   background-color: transparent;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 10px;
   padding-top: 10px;
 
@@ -129,7 +130,7 @@ html, body {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -192,12 +193,13 @@ html, body {
   max-height: 460px;
   background-color: #f2f1e9;
   overflow-y: auto;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 540px) {
   .drugListContainer {
-       max-height: 385px; /* Adjust this value to your preference */
-
+      max-height: 410px; /* Adjust this value to your preference */
+      margin-top: 0px;
   }
 }
 
@@ -219,6 +221,8 @@ html, body {
 @media only screen and (max-width: 540px) {
   #searchBar {
       height: 40px;
+      margin-bottom: 10px;
+
       font-size: 13px;
 
   }
@@ -312,14 +316,14 @@ td {
 
 @media screen and (max-width: 540px) {
   .dose-quantity-cell {
-    font-size: 12px; /* Adjust the font size for mobile screens */
+    font-size: 10px; /* Adjust the font size for mobile screens */
   }
 }
 
 
 .dose-pickers{
   font-family: Geneva;  /* Adjust the font size for Dosage pickers */
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   font-weight: bold;
   color: #484845;
@@ -377,3 +381,15 @@ td {
   margin-right: 5px;
 }
 
+
+
+.mobile-display-only {
+    display: none;
+  }
+
+
+@media screen and (max-width: 540px) {
+  .mobile-display-only {
+    display:inline;
+  }
+}

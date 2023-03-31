@@ -169,8 +169,10 @@ function populateDrugTable() {
     // Dose Quantity Input Field (Picker)
     const doseQuantityInput = document.createElement("input");
     doseQuantityInput.classList.add("dose-pickers");
-    doseQuantityInput.style.width = "30px";
-    doseQuantityInput.style.maxWidth = "25px";
+    doseQuantityInput.style.width = "22px";
+    doseQuantityInput.style.maxWidth = "22px";
+    doseQuantityInput.style.height = "22px";
+    doseQuantityInput.style.maxHeight = "22px";
     doseQuantityInput.type = "number";
     doseQuantityInput.min = "1";
     doseQuantityInput.max = "9";
@@ -184,8 +186,8 @@ function populateDrugTable() {
     // Dose Frequency Drop-down Picker (e.g. Daily / Every Morning)
     const doseFrequencySelect = document.createElement("select");
     doseFrequencySelect.classList.add("dose-pickers");
-    doseFrequencySelect.style.maxWidth = "115px";
-    doseFrequencySelect.style.height = "22px";
+    doseFrequencySelect.style.maxWidth = "100px";
+    doseFrequencySelect.style.height = "25px";
 
     frequencyOptions.forEach(option => {
       const optionElement = document.createElement("option");
@@ -236,6 +238,15 @@ function showCart() {
     console.error("cartItems element not found in HTML");
     return;
   }
+  
+  if (cart.length > 0) {
+    // If there are items in the cart, hide the cart-title "add medication to cart"
+    document.getElementById("cart-title").style.display = "none";
+  } else {
+    // If there are no items in the cart, show the cart title
+    document.getElementById("cart-title").style.display = "block";
+  }
+
   cartItems.innerHTML = "";
   cart.forEach(item => {
     let row = document.createElement("tr");
