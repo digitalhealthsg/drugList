@@ -121,6 +121,7 @@ function removeFromCart(medicine) {
     });
   }
   showCart();
+  searchDrugs();
 }
 
 
@@ -228,6 +229,7 @@ function populateDrugTable() {
     container.appendChild(table);
     tableBody.appendChild(container);
   });
+  searchDrugs();
 }
 
 
@@ -306,33 +308,54 @@ function updateDoseFrequencyFactor(drugName, brandName, newDoseFrequencyFactor) 
 
 
 //more advanced serach function
+
 function searchDrugs() {
   const searchBar = document.getElementById("searchBar");
   const searchText = searchBar.value.trim().toLowerCase();
   const tableContainers = document.querySelectorAll("#drugList tbody .drug-table-container");
+  const noResultsMessage = document.getElementById("drug-list-no-medication");
 
-  tableContainers.forEach(container => {
-    const drugNameSpan = container.querySelector("td span:first-child");
-    const drugBrandSpan = container.querySelector("td span:last-child");
-    const drugName = drugNameSpan.textContent.toLowerCase();
-    const drugBrand = drugBrandSpan.textContent.toLowerCase();
-    const isInCart = cart.some(item => item.medicine.toLowerCase() === drugName);
+  let resultsFound = searchText === "" ? true : false;
 
-    const searchWords = searchText.split(' ');
-
-    const isMatch = searchWords.every(word => drugName.includes(word) || drugBrand.includes(word));
-
-    if (!isInCart) {
-      if (searchText && !isMatch) {
-        container.style.display = "none";
-      } else {
-        container.style.display = "";
-      }
-    } else {
+  if (searchText === "") {
+    tableContainers.forEach(container => {
       container.style.display = "none";
+    });
+    noResultsMessage.style.display = "none";
+  } else {
+    tableContainers.forEach(container => {
+      const drugNameSpan = container.querySelector("td span:first-child");
+      const drugBrandSpan = container.querySelector("td span:last-child");
+      const drugName = drugNameSpan.textContent.toLowerCase();
+      const drugBrand = drugBrandSpan.textContent.toLowerCase();
+
+      const isInCart = cart.some(item => item.medicine.toLowerCase() === drugName);
+      const searchWords = searchText.split(' ');
+
+      const isMatch = searchWords.every(word => drugName.includes(word) || drugBrand.includes(word));
+
+      if (!isInCart) {
+        if (!isMatch) {
+          container.style.display = "none";
+        } else {
+          container.style.display = "";
+          resultsFound = true;
+        }
+      } else {
+        container.style.display = "none";
+      }
+    });
+
+    if (resultsFound) {
+      noResultsMessage.style.display = "none";
+    } else {
+      noResultsMessage.style.display = "";
     }
-  });
+  }
 }
+
+
+
 
 
 function clearSearch() {
@@ -350,12 +373,17 @@ function clearSearch() {
     }
   });
   document.getElementById("searchBar").value = "";
+  searchDrugs(); // Hide the drug list when the search input is cleared
 }
+
+
 
 // Initialize cart and show cart contents
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
 populateDrugTable();
 showCart();
+searchDrugs();
 });

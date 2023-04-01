@@ -149,6 +149,20 @@ html, body {
 }
 
 
+#drug-list-no-medication {
+  text-align: center;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 540px) {
+  #drug-list-no-medication {
+      font-size: 13px;
+      padding-top: 15px;
+  }
+}
+
+
 
 
 
