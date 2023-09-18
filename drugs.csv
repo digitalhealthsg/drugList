@@ -1,234 +1,234 @@
-id,drugName,drugBrand,drugDoseQuantity,drugDoseUnit,drugDoseFrequencyFactor,drugPrice,drugMinOrderQty
-1,Amlodipine 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.65,30
-2,Amlodipine 5mg Tablet,Actapin,1,Tablet(s),Every Morning,0.67,30
-3,Amlodipine 5mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.67,30
-4,Amlodipine 5mg Tablet,Amlotens,1,Tablet(s),Every Morning,0.75,30
-5,Amlodipine 5mg Tablet,Amtas,1,Tablet(s),Every Morning,0.65,30
-6,Amlodipine 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.72,30
-7,Amlodipine 10mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.8,30
-8,Amlodipine 10mg Tablet,Amlotens,1,Tablet(s),Every Morning,0.77,30
-9,Amlodipine 10mg Tablet,Amtas,1,Tablet(s),Every Morning,0.72,30
-10,Caduet 5mg/20mg Tablet (Amlodipine 5mg + Atorvastatin 20mg),Caduet,1,Tablet(s),Every Morning,2.8,30
-11,Caduet 10mg/10mg Tablet (Amlodipine 10mg + Atorvastatin 10mg),Caduet,1,Tablet(s),Every Morning,2.6,30
-12,Caduet 10mg/20mg Tablet (Amlodipine 10mg + Atorvastatin 20mg),Caduet,1,Tablet(s),Every Morning,2.6,30
-13,Coveram 10mg/10mg Tablet (Perindopril Arginine 10mg + Amlodipine 10mg),Coveram,1,Tablet(s),Every Morning,2.5,30
-14,Coveram 10mg/5mg Tablet (Perindopril Arginine 10mg + Amlodipine 5mg),Coveram,1,Tablet(s),Every Morning,2.4,30
-15,Coveram 5mg/10mg Tablet (Perindopril Arginine 5mg + Amlodipine 10mg),Coveram,1,Tablet(s),Every Morning,1.7,30
-16,Coveram 5mg/5mg Tablet (Perindopril Arginine 5mg + Amlodipine 5mg),Coveram,1,Tablet(s),Every Morning,1.7,30
-17,Cozaar XQ 5/100mg Tablet (Amlodipine 5mg + Losartan Potassium 100mg),Cozaar XQ,1,Tablet(s),Every Morning,1.2,30
-18,Cozaar XQ 5/50mg Tablet (Amlodipine 5mg + Losartan Potassium 50mg),Cozaar XQ,1,Tablet(s),Every Morning,1.2,30
-19,Exforge HCT 10mg/160mg/12.5mg Tablet (Amlodipine 10mg + Valsartan 160mg + Hydrochlorothiazide 12.5mg),Exforge,1,Tablet(s),Every Morning,1.87,28
-20,Exforge HCT 5mg/160mg/12.5mg Tablet (Amlodipine 5mg + Valsartan 160mg + Hydrochlorothiazide 12.5mg),Exforge,1,Tablet(s),Every Morning,2.01,28
-21,Exforge 10mg/160mg Tablet (Amlodipine 10mg + Valsartan 160mg),Exforge,1,Tablet(s),Every Morning,1.94,28
-22,Exforge 5mg/160mg Tablet (Amlodipine 5mg + Valsartan 160mg),Exforge,1,Tablet(s),Every Morning,1.94,28
-23,Exforge 5mg/80mg Tablet (Amlodipine 5mg + Valsartan 80mg),Exforge,1,Tablet(s),Every Morning,1.51,28
-24,Twynsta 40/10mg Tablet (Telmisartan 40mg + Amlodipine 10mg),Twynsta,1,Tablet(s),Every Morning,1.6,30
-25,Twynsta 40/5mg Tablet (Telmisartan 40mg + Amlodipine 5mg),Twynsta,1,Tablet(s),Every Morning,1.6,30
-26,Twynsta 80/10mg Tablet (Telmisartan 80mg + Amlodipine 10mg),Twynsta,1,Tablet(s),Every Morning,1.7,30
-27,Twynsta 80/5mg Tablet (Telmisartan 80mg + Amlodipine 5mg),Twynsta,1,Tablet(s),Every Morning,1.7,30
-28,Nifedipine LA 30mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
-29,Nifedipine LA 30mg Tablet,Adalat LA,1,Tablet(s),Every Morning,1.16,30
-30,Nifedipine LA 30mg Tablet,Nifecard XL,1,Tablet(s),Every Morning,0.9,30
-31,Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Generic,1,Capsule(s),Every Morning,0.63,30
-32,Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Beta-Nicardia,1,Capsule(s),Every Morning,0.63,30
-33,Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Niftex-TR,1,Capsule(s),Every Morning,0.81,30
-34,Atenolol 50mg Tablet,Generic,1,Tablet(s),Every Morning,0.46,30
-35,Atenolol 50mg Tablet,APO,1,Tablet(s),Every Morning,0.55,30
-36,Atenolol 50mg Tablet,Normaten,1,Tablet(s),Every Morning,0.62,30
-37,Atenolol 50mg Tablet,7DY,1,Tablet(s),Every Morning,0.46,30
-38,Atenolol 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.6,30
-39,Atenolol 100mg Tablet,Normaten,1,Tablet(s),Every Morning,0.6,30
-40,Bisoprolol 2.5 mg Tablet,Concor,1,Tablet(s),Every Morning,0.9,30
-41,Bisoprolol 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
-42,Bisoprolol 5mg Tablet,BisoHEXAL,1,Tablet(s),Every Morning,0.9,30
-43,Bisoprolol 5mg Tablet,Concor,1,Tablet(s),Every Morning,1.1,30
-44,Carvedilol 6.25mg Tablet,Generic,1,Tablet(s),Every Morning,0.62,30
-45,Carvedilol 6.25mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.62,30
-46,Carvedilol 25mg Tablet,Generic,1,Tablet(s),Every Morning,1.35,30
-47,Carvedilol 25mg Tablet,Sandoz,1,Tablet(s),Every Morning,1.35,30
-48,Carvedilol 25mg Tablet,Dilatrend,1,Tablet(s),Every Morning,1.58,30
-49,Propranolol Hydrochloride 10mg Tablet,Inpanol,1,Tablet(s),Every Morning,0.43,30
-50,Perindopril Arginine 5mg Tablet,Coversyl,1,Tablet(s),Every Morning,1.63,30
-51,Perindopril Arginine 10mg Tablet,Coversyl,1,Tablet(s),Every Morning,2.27,30
-52,Coversyl Plus 5mg / 1.25mg Tablet (Perindopril Arginine 5mg + Indapamide 1.25mg Tablet),Coversyl,1,Tablet(s),Every Morning,1.63,30
-53,Lisinopril 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,28
-54,Lisinopril 5mg Tablet,Zestril,1,Tablet(s),Every Morning,0.9,28
-55,Lisinopril 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.72,30
-56,Lisinopril 10mg Tablet,Zestril,1,Tablet(s),Every Morning,1.2,28
-57,Lisinopril 10mg Tablet,Lisdene (7DY),1,Tablet(s),Every Morning,0.72,30
-58,Enalapril 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.55,30
-59,Enalapril 5mg Tablet,Korandil,1,Tablet(s),Every Morning,0.55,30
-60,Enalapril 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.33,100
-61,Enalapril 10mg Tablet,Korandil,1,Tablet(s),Every Morning,0.39,30
-62,Enalapril 10mg Tablet,Ecaril,1,Tablet(s),Every Morning,0.33,100
-63,Enalapril 10mg Tablet,Invoril,1,Tablet(s),Every Morning,0.36,100
-64,Enalapril 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.49,100
-65,Enalapril 20mg Tablet,Invoril,1,Tablet(s),Every Morning,0.49,100
-66,Irbesartan 150mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,28
-67,Irbesartan 150mg Tablet,Tensiber F/C,1,Tablet(s),Every Morning,0.8,28
-68,Irbesartan 150mg Tablet,Aprovel,1,Tablet(s),Every Morning,1.5,28
-69,Irbesartan 300mg Tablet,Generic,1,Tablet(s),Every Morning,0.95,28
-70,Irbesartan 300mg Tablet,Tensiber F/C,1,Tablet(s),Every Morning,0.95,28
-71,Irbesartan 300mg Tablet,Aprovel,1,Tablet(s),Every Morning,1.9,28
-72,Co-Aprovel 300/12.5mg Tablet (Irbesartan 300mg + Hydrochlorothiazide 12.5mg),Aprovel,1,Tablet(s),Every Morning,1.87,28
-73,Co-Aprovel 300/25mg Tablet (Irbesartan 300mg + Hydrochlorothiazide 25mg),Aprovel,1,Tablet(s),Every Morning,2.1,28
-74,Losartan Potassium 50mg Tablet,Generic,1,Tablet(s),Every Morning,0.7,30
-75,Losartan Potassium 50mg Tablet,Hexal,1,Tablet(s),Every Morning,0.7,30
-76,Losartan Potassium 50mg Tablet,A-Losartan,1,Tablet(s),Every Morning,0.7,30
-77,Losartan Potassium 50mg Tablet,Cozaar,1,Tablet(s),Every Morning,1.46,30
-78,Losartan Potassium 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,30
-79,Losartan Potassium 100mg Tablet,Hexal,1,Tablet(s),Every Morning,0.8,30
-80,Losartan Potassium 100mg Tablet,A-Losartan,1,Tablet(s),Every Morning,0.8,30
-81,Losartan Potassium 100mg Tablet,Cozaar,1,Tablet(s),Every Morning,1.46,30
-82,Hyzaar Forte Tablet 100/25mg Tablet (Losartan Potassium 100mg + Hydrochlorothiazide 25mg),Hyzaar,1,Tablet(s),Every Morning,1.25,30
-83,Hyzaar Plus Tablet 100/12.5mg Tablet (Losartan Potassium 100mg + Hydrochlorothiazide 12.5mg),Hyzaar,1,Tablet(s),Every Morning,1.15,30
-84,Hyzaar Tablet 50/12.5mg Tablet (Losartan Potassium 50mg + Hydrochlorthiazide 12.5mg),Hyzaar,1,Tablet(s),Every Morning,1.25,30
-85,Telmisartan 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,30
-86,Telmisartan 40mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.8,30
-87,Telmisartan 40mg Tablet,Micardis,1,Tablet(s),Every Morning,1.5,30
-88,Telmisartan 80mg Tablet,Generic,1,Tablet(s),Every Morning,0.83,30
-89,Telmisartan 80mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.83,30
-90,Telmisartan 80mg Tablet,Micardis,1,Tablet(s),Every Morning,1.55,30
-91,Micardis Plus 80/12.5mg Tablet (Telmisartan 80mg + Hydrochlorothiazide 12.5mg),Micardis,1,Tablet(s),Every Morning,1.7,30
-92,Micardis Plus 40/12.5mg Tablet (Telmisartan 40mg + Hydrochlorothiazide 12.5mg),Micardis,1,Tablet(s),Every Morning,1.5,30
-93,Valsartan 80mg Tablet,Generic,1,Tablet(s),Every Morning,0.87,28
-94,Valsartan 80mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.87,28
-95,Valsartan 80mg Tablet,Diovan,1,Tablet(s),Every Morning,1.45,28
-96,Valsartan 160mg Tablet,Generic,1,Tablet(s),Every Morning,0.95,28
-97,Valsartan 160mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.95,28
-98,Valsartan 160mg Tablet,Diovan,1,Tablet(s),Every Morning,1.85,28
-99,Co-Diovan 160/12.5mg Tablet (Valsartan 160mg + Hydrochlorothiazide 12.5mg),Co-Diovan,1,Tablet(s),Every Morning,1.85,28
-100,Co-Diovan 160/25mg Tablet (Valsartan 160mg + Hydrochlorothiazide 25mg),Co-Diovan,1,Tablet(s),Every Morning,1.96,28
-101,Co-Diovan 80/25mg Tablet (Valsartan 80mg + Hydrochlorothiazide 12.5mg),Co-Diovan,1,Tablet(s),Every Morning,1.65,28
-102,Olmesartan 20mg Tablet,Olmetec,1,Tablet(s),Every Morning,1.38,30
-103,Olmesartan 40mg Tablet,Olmetec,1,Tablet(s),Every Morning,1.38,30
-104,Azoren 20mg/5mg Tablet (Olmesartan 20mg + Amlodipine 5mg),Azoren,1,Tablet(s),Every Morning,1.47,30
-105,Azoren 40mg/5mg Tablet (Olmesartan 40mg + Amlodipine 5mg),Azoren,1,Tablet(s),Every Morning,1.47,30
-106,Hydrochlorothiazide 25mg Tablet,APO,1,Tablet(s),Every Morning,0.35,30
-107,Furosemide 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
-108,Furosemide 40mg Tablet,APO,1,Tablet(s),Every Morning,0.36,30
-109,Furosemide 40mg Tablet,Lasix,1,Tablet(s),Every Morning,0.73,30
-110,Spirinolactone 25mg Tablet,Aldactone,1,Tablet(s),Every Morning,1,30
-111,Hydralazine 10mg Tablet,Generic,1,Tablet(s),3 times/day,0.27,30
-112,Tamsulosin Hydrochloride 400mcg Tablet,Harnal,1,Tablet(s),Every Morning,1.75,30
-113,Alfuzosin 5mg Tablet,Xatral,1,Tablet(s),Every Morning,1.45,30
-114,Alfuzosin 10mg Tablet,Xatral,1,Tablet(s),Every Morning,2.14,30
-115,Terazosin 1mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.3,30
-116,Terazosin 2mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.34,30
-117,Terazosin 5mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.44,30
-118,Acarbose 50mg Tablet,Glucobay,1,Tablet(s),3 times/day,0.5,30
-119,Acarbose 100mg Tablet,Glucobay,1,Tablet(s),3 times/day,0.62,30
-120,Glipizide 5mg Tablet,Generic,1,Tablet(s),2 times/day,0.2,30
-121,Glipizide 5mg Tablet,7DY,1,Tablet(s),2 times/day,0.2,30
-122,Glimepiride 1mg Tablet,Amaryl,1,Tablet(s),2 times/day,0.8,30
-123,Glimepiride 2mg Tablet,Amaryl,1,Tablet(s),2 times/day,1.07,30
-124,Gliclazide 30mg MR Tablet,APO,1,Tablet(s),Every Morning,0.67,30
-125,Gliclazide 60mg MR Tablet,Diamicron,1,Tablet(s),Every Morning,1.29,30
-126,Gliclazide 80mg Tablet,Glimicron,1,Tablet(s),2 times/day,0.32,30
-127,Metformin 250mg Tablet,Generic,1,Tablet(s),2 times/day,0.24,30
-128,Metformin 500mg Tablet,Generic,1,Tablet(s),2 times/day,0.26,30
-129,Metformin 500mg Tablet,7DY,1,Tablet(s),2 times/day,0.26,30
-130,Metformin 850mg Tablet,Generic,1,Tablet(s),2 times/day,0.3,30
-131,Metformin 850mg Tablet,Diabetmin,1,Tablet(s),2 times/day,0.3,30
-132,Metformin 850mg Tablet,Glycomet,1,Tablet(s),2 times/day,0.3,30
-133,Metformin 850mg Tablet,Glucophage,1,Tablet(s),2 times/day,0.43,30
-134,Metformin XR 750mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.6,30
-135,Metformin XR 500mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.54,30
-136,Metformin XR 1000mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.7,30
-137,Sitagliptin 50mg + Metformin 1000mg Tablet,Janumet,1,Tablet(s),2 times/day,2.8,30
-138,Sitagliptin 50mg + Metformin 500mg Tablet,Janumet,1,Tablet(s),2 times/day,1.55,30
-139,Sitagliptin 50mg + Metformin 850mg Tablet,Janumet,1,Tablet(s),2 times/day,1.55,30
-140,Sitagliptin 100mg + Metformin XR 1000mg Tablet,Janumet XR,1,Tablet(s),Every Morning,2.85,30
-141,Sitagliptin 50mg + Metformin XR 1000mg Tablet,Janumet XR,1,Tablet(s),Every Morning,1.55,30
-142,Sitagliptin 50mg + Metformin XR 500mg Tablet,Janumet XR,1,Tablet(s),Every Morning,1.55,30
-143,Empagliflozin 12.5mg + Metformin Hydrochloride 500mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.8,30
-144,Empagliflozin 12.5mg + Metformin Hydrochloride 850mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.85,30
-145,Empagliflozin 5mg + Metformin Hydrochloride 500mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.46,30
-146,Empagliflozin 12.5mg + Metformin Hydrochloride 1000mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.95,30
-147,Linagliptin 2.5mg + Metformin Hydrochloride 1000mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.3,30
-148,Linagliptin 2.5mg + Metformin Hydrochloride 500 mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.35,30
-149,Linagliptin 2.5mg + Metformin Hydrochloride 850mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.35,30
-150,Dapagliflozin 10mg + Metformin XR 1000mg,Xigduo XR,1,Tablet(s),Every Morning,3.5,30
-151,Dapagliflozin 5mg + Metformin XR 1000mg,Xigduo XR,1,Tablet(s),Every Morning,1.9,30
-152,Empagliflozin 10mg Tablet,Jardiance,1,Tablet(s),Every Morning,2.85,30
-153,Empagliflozin 25mg Tablet,Jardiance,1,Tablet(s),Every Morning,3.43,30
-154,Linagliptin 5mg Tablet,Trajenta,1,Tablet(s),Every Morning,2.7,30
-155,Sitagliptin 25mg Tablet,Januvia,1,Tablet(s),Every Morning,2.55,30
-156,Sitagliptin 50mg Tablet,Januvia,1,Tablet(s),Every Morning,2.8,30
-157,Sitagliptin 100mg Tablet,Januvia,1,Tablet(s),Every Morning,2.9,30
-158,Aspirin 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
-159,Aspirin 100mg Tablet,Cardiprin,1,Tablet(s),Every Morning,0.53,30
-160,Aspirin 100mg Tablet,Glyprin,1,Tablet(s),Every Morning,0.46,30
-161,Clopidogrel 75mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
-162,Clopidogrel 75mg Tablet,Platless,1,Tablet(s),Every Morning,0.9,30
-163,Clopidogrel 75mg Tablet,APO,1,Tablet(s),Every Morning,2.03,30
-164,Clopidogrel 75mg Tablet,Sandoz,1,Tablet(s),Every Morning,1.01,30
-165,Clopidogrel 75mg Tablet,Plavix,1,Tablet(s),Every Morning,4,28
-166,Esomeprazole 20mg Tablet,Emanera,1,Tablet(s),Every Morning,1.03,30
-167,Esomeprazole 40mg Tablet,Nexium,1,Tablet(s),Every Morning,4.5,30
-168,Omeprazole 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.45,30
-169,Omeprazole 20mg Tablet,Losec,1,Tablet(s),Every Morning,5.5,30
-170,Omeprazole 20mg Tablet,Olit,1,Tablet(s),Every Morning,0.45,30
-171,Famotidine 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.35,30
-172,Famotidine 20mg Tablet,7DY,1,Tablet(s),Every Morning,0.35,30
-173,Famotidine 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.32,30
-174,Pantoprazole 40 mg Enteric-Coated Tablet,Generic,1,Tablet(s),Every Morning,1.16,28
-175,Calcium Carbonate 450 mg + Colecalciferol 200 iu Tablet,Suncal-D,1,Tablet(s),Every Morning,0.24,30
-176,Vitamin B1 100 mg + Vitamin B6 200 mg + Vitamin B12 200 microgram Tablet,Daneuron,1,Tablet(s),Every Morning,0.3,30
-177,Glucosamine Sulphate 1500mg Tablets,OH-Veg,1,Tablet(s),Daily,0.84,60
-178,Fenofibrate 100mg Capsule,Trolip,1,Capsule(s),Every Morning,0.34,30
-179,Ezetimibe 10mg Tablet,Ezetrol,1,Tablet(s),Every Morning,2.37,30
-180,Lovastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.39,30
-181,Lovastatin 20mg Tablet,Ellanco,1,Tablet(s),Every Evening,0.39,30
-182,Lovastatin 20mg Tablet,Medostatin,1,Tablet(s),Every Evening,0.42,30
-183,Simvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,0.41,30
-184,Simvastatin 10mg Tablet,Simvor (7DY),1,Tablet(s),Every Evening,0.41,30
-185,Simvastatin 10mg Tablet,APO,1,Tablet(s),Every Evening,0.65,30
-186,Simvastatin 10mg Tablet,Simtin,1,Tablet(s),Every Evening,0.69,30
-187,Simvastatin 10mg Tablet,Zocor,1,Tablet(s),Every Evening,1.8,30
-188,Simvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.55,30
-189,Simvastatin 20mg Tablet,Simvor (7DY),1,Tablet(s),Every Evening,0.55,30
-190,Simvastatin 20mg Tablet,Priacin,1,Tablet(s),Every Evening,0.62,30
-191,Simvastatin 20mg Tablet,Simtin,1,Tablet(s),Every Evening,0.95,30
-192,Simvastatin 20mg Tablet,Simvas,1,Tablet(s),Every Evening,0.57,30
-193,Simvastatin 20mg Tablet,Zocor,1,Tablet(s),Every Evening,1.8,30
-194,Vytorin Tablet 10mg/10mg (Ezetimibe 10mg + Simvastatin 10mg),Vytorin,1,Tablet(s),Every Morning,2.59,30
-195,Vytorin Tablet 10mg/20mg (Ezetimibe 10mg + Simvastatin 20mg),Vytorin,1,Tablet(s),Every Morning,2.8,30
-196,Atorvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,0.77,30
-197,Atorvastatin 10mg Tablet,Atoris,1,Tablet(s),Every Evening,0.77,30
-198,Atorvastatin 10mg Tablet,Lipitor,1,Tablet(s),Every Evening,1.9,30
-199,Atorvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.76,30
-200,Atorvastatin 20mg Tablet,Tulip,1,Tablet(s),Every Evening,0.76,30
-201,Atorvastatin 20mg Tablet,Atoris,1,Tablet(s),Every Evening,1.03,30
-202,Atorvastatin 20mg Tablet,Lipitor,1,Tablet(s),Every Evening,1.9,30
-203,Rosuvastatin 5mg Tablet,Crestor,1,Tablet(s),Every Evening,1.94,28
-204,Rosuvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,1.13,30
-205,Rosuvastatin 10mg Tablet,Sandoz,1,Tablet(s),Every Evening,1.13,30
-206,Rosuvastatin 10mg Tablet,Crestor,1,Tablet(s),Every Evening,2.8,28
-207,Rosuvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,1.37,30
-208,Rosuvastatin 20mg Tablet,Sandoz,1,Tablet(s),Every Evening,1.37,30
-209,Rosuvastatin 20mg Tablet,Crestor,1,Tablet(s),Every Evening,3.51,28
-210,Paracetmol 500mg Tablet,Uphamol,2,Tablet(s),4 times/day,0.1,40
-211,Paracetamol 450 mg + Orphenadrine Citrate 35 mg Tablet,Suniton,2,Tablet(s),3 times/day,0.12,40
-212,Naproxen Sodium. 275mg Tablet,Generic,2,Tablet(s),2 times/day,0.4,40
-213,Naproxen Sodium. 275mg Tablet,Soden,2,Tablet(s),2 times/day,0.4,40
-214,Naproxen Sodium. 275mg Tablet,Synflex,2,Tablet(s),2 times/day,0.8,40
-215,Diclofenac 50mg Tablet,Clofenac,1,Tablet(s),3 times/day,0.4,40
-216,Colchicine 600mcg Tablet,Colcitex,1,Tablet(s),3 times/day,0.6,40
-217,Allopurinol 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
-218,Allopurinol 300mg Tablet,APO,1,Tablet(s),Every Morning,0.46,100
-219,Mometasone Furoate 50 mcg/actuation (60 Doses),Nasonex,2,Spray(s),Every Morning,0.6,60
-220,Mometasone Furoate 50 mcg/actuation (140 Doses),Nasonex,2,Spray(s),Every Morning,0.36,140
-221,Fexofenadine Hydrochloride 180 mg Tablet,Telfast,1,Tablet(s),Every Morning,1.1,20
-222,Lorataine 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.6,30
-223,Lorataine 10mg Tablet,Lorfast,1,Tablet(s),Every Morning,0.6,30
-224,Lorataine 10mg Tablet,Clarityn,1,Tablet(s),Every Morning,1.5,30
-225,Chlorpheniramine Maleate 4 mg Tablet,Generic,1,Tablet(s),3 times/day,0.35,40
-226,Chlorpheniramine Maleate 4 mg Tablet,7DY,1,Tablet(s),3 times/day,0.35,40
-227,Chlorpheniramine Maleate 4 mg Tablet,Chloramine,1,Tablet(s),3 times/day,0.35,40
-228,Salbutamol 100 microgram/ actuation Inhaler,Generic,2,Puff(s),3 times/day,0.07,200
-229,Salbutamol 100 microgram/ actuation Inhaler,Salbuair,2,Puff(s),3 times/day,0.08,200
-230,Salbutamol 100 microgram/ actuation Inhaler,Ventolin,2,Puff(s),3 times/day,0.1,200
-231,Salbutamol 100 microgram/ actuation Inhaler,Azmasol,2,Puff(s),3 times/day,0.07,200
-232,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (120 Doses),Symbicort,1,Inhalation(s),2 times/day,0.9,120
-233,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (60 Doses),Symbicort,1,Inhalation(s),2 times/day,1,60
+drugName,drugBrand,drugDoseQuantity,drugDoseUnit,drugDoseFrequencyFactor,drugPrice,drugMinOrderQty
+Amlodipine 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.65,30
+Amlodipine 5mg Tablet,Actapin,1,Tablet(s),Every Morning,0.67,30
+Amlodipine 5mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.67,30
+Amlodipine 5mg Tablet,Amlotens,1,Tablet(s),Every Morning,0.75,30
+Amlodipine 5mg Tablet,Amtas,1,Tablet(s),Every Morning,0.65,30
+Amlodipine 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.72,30
+Amlodipine 10mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.8,30
+Amlodipine 10mg Tablet,Amlotens,1,Tablet(s),Every Morning,0.77,30
+Amlodipine 10mg Tablet,Amtas,1,Tablet(s),Every Morning,0.72,30
+Caduet 5mg/20mg Tablet (Amlodipine 5mg + Atorvastatin 20mg),Caduet,1,Tablet(s),Every Morning,2.8,30
+Caduet 10mg/10mg Tablet (Amlodipine 10mg + Atorvastatin 10mg),Caduet,1,Tablet(s),Every Morning,2.6,30
+Caduet 10mg/20mg Tablet (Amlodipine 10mg + Atorvastatin 20mg),Caduet,1,Tablet(s),Every Morning,2.6,30
+Coveram 10mg/10mg Tablet (Perindopril Arginine 10mg + Amlodipine 10mg),Coveram,1,Tablet(s),Every Morning,2.5,30
+Coveram 10mg/5mg Tablet (Perindopril Arginine 10mg + Amlodipine 5mg),Coveram,1,Tablet(s),Every Morning,2.4,30
+Coveram 5mg/10mg Tablet (Perindopril Arginine 5mg + Amlodipine 10mg),Coveram,1,Tablet(s),Every Morning,1.7,30
+Coveram 5mg/5mg Tablet (Perindopril Arginine 5mg + Amlodipine 5mg),Coveram,1,Tablet(s),Every Morning,1.7,30
+Cozaar XQ 5/100mg Tablet (Amlodipine 5mg + Losartan Potassium 100mg),Cozaar XQ,1,Tablet(s),Every Morning,1.2,30
+Cozaar XQ 5/50mg Tablet (Amlodipine 5mg + Losartan Potassium 50mg),Cozaar XQ,1,Tablet(s),Every Morning,1.2,30
+Exforge HCT 10mg/160mg/12.5mg Tablet (Amlodipine 10mg + Valsartan 160mg + Hydrochlorothiazide 12.5mg),Exforge,1,Tablet(s),Every Morning,1.87,28
+Exforge HCT 5mg/160mg/12.5mg Tablet (Amlodipine 5mg + Valsartan 160mg + Hydrochlorothiazide 12.5mg),Exforge,1,Tablet(s),Every Morning,2.01,28
+Exforge 10mg/160mg Tablet (Amlodipine 10mg + Valsartan 160mg),Exforge,1,Tablet(s),Every Morning,1.94,28
+Exforge 5mg/160mg Tablet (Amlodipine 5mg + Valsartan 160mg),Exforge,1,Tablet(s),Every Morning,1.94,28
+Exforge 5mg/80mg Tablet (Amlodipine 5mg + Valsartan 80mg),Exforge,1,Tablet(s),Every Morning,1.51,28
+Twynsta 40/10mg Tablet (Telmisartan 40mg + Amlodipine 10mg),Twynsta,1,Tablet(s),Every Morning,1.6,30
+Twynsta 40/5mg Tablet (Telmisartan 40mg + Amlodipine 5mg),Twynsta,1,Tablet(s),Every Morning,1.6,30
+Twynsta 80/10mg Tablet (Telmisartan 80mg + Amlodipine 10mg),Twynsta,1,Tablet(s),Every Morning,1.7,30
+Twynsta 80/5mg Tablet (Telmisartan 80mg + Amlodipine 5mg),Twynsta,1,Tablet(s),Every Morning,1.7,30
+Nifedipine LA 30mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
+Nifedipine LA 30mg Tablet,Adalat LA,1,Tablet(s),Every Morning,1.16,30
+Nifedipine LA 30mg Tablet,Nifecard XL,1,Tablet(s),Every Morning,0.9,30
+Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Generic,1,Capsule(s),Every Morning,0.63,30
+Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Beta-Nicardia,1,Capsule(s),Every Morning,0.63,30
+Atenolol 50mg + Nifedipine (slow-relase) 20mg Capsule,Niftex-TR,1,Capsule(s),Every Morning,0.81,30
+Atenolol 50mg Tablet,Generic,1,Tablet(s),Every Morning,0.46,30
+Atenolol 50mg Tablet,APO,1,Tablet(s),Every Morning,0.55,30
+Atenolol 50mg Tablet,Normaten,1,Tablet(s),Every Morning,0.62,30
+Atenolol 50mg Tablet,7DY,1,Tablet(s),Every Morning,0.46,30
+Atenolol 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.6,30
+Atenolol 100mg Tablet,Normaten,1,Tablet(s),Every Morning,0.6,30
+Bisoprolol 2.5 mg Tablet,Concor,1,Tablet(s),Every Morning,0.9,30
+Bisoprolol 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
+Bisoprolol 5mg Tablet,BisoHEXAL,1,Tablet(s),Every Morning,0.9,30
+Bisoprolol 5mg Tablet,Concor,1,Tablet(s),Every Morning,1.1,30
+Carvedilol 6.25mg Tablet,Generic,1,Tablet(s),Every Morning,0.62,30
+Carvedilol 6.25mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.62,30
+Carvedilol 25mg Tablet,Generic,1,Tablet(s),Every Morning,1.35,30
+Carvedilol 25mg Tablet,Sandoz,1,Tablet(s),Every Morning,1.35,30
+Carvedilol 25mg Tablet,Dilatrend,1,Tablet(s),Every Morning,1.58,30
+Propranolol Hydrochloride 10mg Tablet,Inpanol,1,Tablet(s),Every Morning,0.43,30
+Perindopril Arginine 5mg Tablet,Coversyl,1,Tablet(s),Every Morning,1.63,30
+Perindopril Arginine 10mg Tablet,Coversyl,1,Tablet(s),Every Morning,2.27,30
+Coversyl Plus 5mg / 1.25mg Tablet (Perindopril Arginine 5mg + Indapamide 1.25mg Tablet),Coversyl,1,Tablet(s),Every Morning,1.63,30
+Lisinopril 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,28
+Lisinopril 5mg Tablet,Zestril,1,Tablet(s),Every Morning,0.9,28
+Lisinopril 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.72,30
+Lisinopril 10mg Tablet,Zestril,1,Tablet(s),Every Morning,1.2,28
+Lisinopril 10mg Tablet,Lisdene (7DY),1,Tablet(s),Every Morning,0.72,30
+Enalapril 5mg Tablet,Generic,1,Tablet(s),Every Morning,0.55,30
+Enalapril 5mg Tablet,Korandil,1,Tablet(s),Every Morning,0.55,30
+Enalapril 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.33,100
+Enalapril 10mg Tablet,Korandil,1,Tablet(s),Every Morning,0.39,30
+Enalapril 10mg Tablet,Ecaril,1,Tablet(s),Every Morning,0.33,100
+Enalapril 10mg Tablet,Invoril,1,Tablet(s),Every Morning,0.36,100
+Enalapril 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.49,100
+Enalapril 20mg Tablet,Invoril,1,Tablet(s),Every Morning,0.49,100
+Irbesartan 150mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,28
+Irbesartan 150mg Tablet,Tensiber F/C,1,Tablet(s),Every Morning,0.8,28
+Irbesartan 150mg Tablet,Aprovel,1,Tablet(s),Every Morning,1.5,28
+Irbesartan 300mg Tablet,Generic,1,Tablet(s),Every Morning,0.95,28
+Irbesartan 300mg Tablet,Tensiber F/C,1,Tablet(s),Every Morning,0.95,28
+Irbesartan 300mg Tablet,Aprovel,1,Tablet(s),Every Morning,1.9,28
+Co-Aprovel 300/12.5mg Tablet (Irbesartan 300mg + Hydrochlorothiazide 12.5mg),Aprovel,1,Tablet(s),Every Morning,1.87,28
+Co-Aprovel 300/25mg Tablet (Irbesartan 300mg + Hydrochlorothiazide 25mg),Aprovel,1,Tablet(s),Every Morning,2.1,28
+Losartan Potassium 50mg Tablet,Generic,1,Tablet(s),Every Morning,0.7,30
+Losartan Potassium 50mg Tablet,Hexal,1,Tablet(s),Every Morning,0.7,30
+Losartan Potassium 50mg Tablet,A-Losartan,1,Tablet(s),Every Morning,0.7,30
+Losartan Potassium 50mg Tablet,Cozaar,1,Tablet(s),Every Morning,1.46,30
+Losartan Potassium 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,30
+Losartan Potassium 100mg Tablet,Hexal,1,Tablet(s),Every Morning,0.8,30
+Losartan Potassium 100mg Tablet,A-Losartan,1,Tablet(s),Every Morning,0.8,30
+Losartan Potassium 100mg Tablet,Cozaar,1,Tablet(s),Every Morning,1.46,30
+Hyzaar Forte Tablet 100/25mg Tablet (Losartan Potassium 100mg + Hydrochlorothiazide 25mg),Hyzaar,1,Tablet(s),Every Morning,1.25,30
+Hyzaar Plus Tablet 100/12.5mg Tablet (Losartan Potassium 100mg + Hydrochlorothiazide 12.5mg),Hyzaar,1,Tablet(s),Every Morning,1.15,30
+Hyzaar Tablet 50/12.5mg Tablet (Losartan Potassium 50mg + Hydrochlorthiazide 12.5mg),Hyzaar,1,Tablet(s),Every Morning,1.25,30
+Telmisartan 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.8,30
+Telmisartan 40mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.8,30
+Telmisartan 40mg Tablet,Micardis,1,Tablet(s),Every Morning,1.5,30
+Telmisartan 80mg Tablet,Generic,1,Tablet(s),Every Morning,0.83,30
+Telmisartan 80mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.83,30
+Telmisartan 80mg Tablet,Micardis,1,Tablet(s),Every Morning,1.55,30
+Micardis Plus 80/12.5mg Tablet (Telmisartan 80mg + Hydrochlorothiazide 12.5mg),Micardis,1,Tablet(s),Every Morning,1.7,30
+Micardis Plus 40/12.5mg Tablet (Telmisartan 40mg + Hydrochlorothiazide 12.5mg),Micardis,1,Tablet(s),Every Morning,1.5,30
+Valsartan 80mg Tablet,Generic,1,Tablet(s),Every Morning,0.87,28
+Valsartan 80mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.87,28
+Valsartan 80mg Tablet,Diovan,1,Tablet(s),Every Morning,1.45,28
+Valsartan 160mg Tablet,Generic,1,Tablet(s),Every Morning,0.95,28
+Valsartan 160mg Tablet,Sandoz,1,Tablet(s),Every Morning,0.95,28
+Valsartan 160mg Tablet,Diovan,1,Tablet(s),Every Morning,1.85,28
+Co-Diovan 160/12.5mg Tablet (Valsartan 160mg + Hydrochlorothiazide 12.5mg),Co-Diovan,1,Tablet(s),Every Morning,1.85,28
+Co-Diovan 160/25mg Tablet (Valsartan 160mg + Hydrochlorothiazide 25mg),Co-Diovan,1,Tablet(s),Every Morning,1.96,28
+Co-Diovan 80/25mg Tablet (Valsartan 80mg + Hydrochlorothiazide 12.5mg),Co-Diovan,1,Tablet(s),Every Morning,1.65,28
+Olmesartan 20mg Tablet,Olmetec,1,Tablet(s),Every Morning,1.38,30
+Olmesartan 40mg Tablet,Olmetec,1,Tablet(s),Every Morning,1.38,30
+Azoren 20mg/5mg Tablet (Olmesartan 20mg + Amlodipine 5mg),Azoren,1,Tablet(s),Every Morning,1.47,30
+Azoren 40mg/5mg Tablet (Olmesartan 40mg + Amlodipine 5mg),Azoren,1,Tablet(s),Every Morning,1.47,30
+Hydrochlorothiazide 25mg Tablet,APO,1,Tablet(s),Every Morning,0.35,30
+Furosemide 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
+Furosemide 40mg Tablet,APO,1,Tablet(s),Every Morning,0.36,30
+Furosemide 40mg Tablet,Lasix,1,Tablet(s),Every Morning,0.73,30
+Spirinolactone 25mg Tablet,Aldactone,1,Tablet(s),Every Morning,1,30
+Hydralazine 10mg Tablet,Generic,1,Tablet(s),3 times/day,0.27,30
+Tamsulosin Hydrochloride 400mcg Tablet,Harnal,1,Tablet(s),Every Morning,1.75,30
+Alfuzosin 5mg Tablet,Xatral,1,Tablet(s),Every Morning,1.45,30
+Alfuzosin 10mg Tablet,Xatral,1,Tablet(s),Every Morning,2.14,30
+Terazosin 1mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.3,30
+Terazosin 2mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.34,30
+Terazosin 5mg Tablet,Hytrin,1,Tablet(s),Every Morning,1.44,30
+Acarbose 50mg Tablet,Glucobay,1,Tablet(s),3 times/day,0.5,30
+Acarbose 100mg Tablet,Glucobay,1,Tablet(s),3 times/day,0.62,30
+Glipizide 5mg Tablet,Generic,1,Tablet(s),2 times/day,0.2,30
+Glipizide 5mg Tablet,7DY,1,Tablet(s),2 times/day,0.2,30
+Glimepiride 1mg Tablet,Amaryl,1,Tablet(s),2 times/day,0.8,30
+Glimepiride 2mg Tablet,Amaryl,1,Tablet(s),2 times/day,1.07,30
+Gliclazide 30mg MR Tablet,APO,1,Tablet(s),Every Morning,0.67,30
+Gliclazide 60mg MR Tablet,Diamicron,1,Tablet(s),Every Morning,1.29,30
+Gliclazide 80mg Tablet,Glimicron,1,Tablet(s),2 times/day,0.32,30
+Metformin 250mg Tablet,Generic,1,Tablet(s),2 times/day,0.24,30
+Metformin 500mg Tablet,Generic,1,Tablet(s),2 times/day,0.26,30
+Metformin 500mg Tablet,7DY,1,Tablet(s),2 times/day,0.26,30
+Metformin 850mg Tablet,Generic,1,Tablet(s),2 times/day,0.3,30
+Metformin 850mg Tablet,Diabetmin,1,Tablet(s),2 times/day,0.3,30
+Metformin 850mg Tablet,Glycomet,1,Tablet(s),2 times/day,0.3,30
+Metformin 850mg Tablet,Glucophage,1,Tablet(s),2 times/day,0.43,30
+Metformin XR 750mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.6,30
+Metformin XR 500mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.54,30
+Metformin XR 1000mg Tablet,Glucophage XR,1,Tablet(s),Every Morning,0.7,30
+Sitagliptin 50mg + Metformin 1000mg Tablet,Janumet,1,Tablet(s),2 times/day,2.8,30
+Sitagliptin 50mg + Metformin 500mg Tablet,Janumet,1,Tablet(s),2 times/day,1.55,30
+Sitagliptin 50mg + Metformin 850mg Tablet,Janumet,1,Tablet(s),2 times/day,1.55,30
+Sitagliptin 100mg + Metformin XR 1000mg Tablet,Janumet XR,1,Tablet(s),Every Morning,2.85,30
+Sitagliptin 50mg + Metformin XR 1000mg Tablet,Janumet XR,1,Tablet(s),Every Morning,1.55,30
+Sitagliptin 50mg + Metformin XR 500mg Tablet,Janumet XR,1,Tablet(s),Every Morning,1.55,30
+Empagliflozin 12.5mg + Metformin Hydrochloride 500mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.8,30
+Empagliflozin 12.5mg + Metformin Hydrochloride 850mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.85,30
+Empagliflozin 5mg + Metformin Hydrochloride 500mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.46,30
+Empagliflozin 12.5mg + Metformin Hydrochloride 1000mg Tablet,Jardiance Duo,1,Tablet(s),2 times/day,1.95,30
+Linagliptin 2.5mg + Metformin Hydrochloride 1000mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.3,30
+Linagliptin 2.5mg + Metformin Hydrochloride 500 mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.35,30
+Linagliptin 2.5mg + Metformin Hydrochloride 850mg Tablet,Trajenta Duo,1,Tablet(s),2 times/day,1.35,30
+Dapagliflozin 10mg + Metformin XR 1000mg,Xigduo XR,1,Tablet(s),Every Morning,3.5,30
+Dapagliflozin 5mg + Metformin XR 1000mg,Xigduo XR,1,Tablet(s),Every Morning,1.9,30
+Empagliflozin 10mg Tablet,Jardiance,1,Tablet(s),Every Morning,2.85,30
+Empagliflozin 25mg Tablet,Jardiance,1,Tablet(s),Every Morning,3.43,30
+Linagliptin 5mg Tablet,Trajenta,1,Tablet(s),Every Morning,2.7,30
+Sitagliptin 25mg Tablet,Januvia,1,Tablet(s),Every Morning,2.55,30
+Sitagliptin 50mg Tablet,Januvia,1,Tablet(s),Every Morning,2.8,30
+Sitagliptin 100mg Tablet,Januvia,1,Tablet(s),Every Morning,2.9,30
+Aspirin 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
+Aspirin 100mg Tablet,Cardiprin,1,Tablet(s),Every Morning,0.53,30
+Aspirin 100mg Tablet,Glyprin,1,Tablet(s),Every Morning,0.46,30
+Clopidogrel 75mg Tablet,Generic,1,Tablet(s),Every Morning,0.9,30
+Clopidogrel 75mg Tablet,Platless,1,Tablet(s),Every Morning,0.9,30
+Clopidogrel 75mg Tablet,APO,1,Tablet(s),Every Morning,2.03,30
+Clopidogrel 75mg Tablet,Sandoz,1,Tablet(s),Every Morning,1.01,30
+Clopidogrel 75mg Tablet,Plavix,1,Tablet(s),Every Morning,4,28
+Esomeprazole 20mg Tablet,Emanera,1,Tablet(s),Every Morning,1.03,30
+Esomeprazole 40mg Tablet,Nexium,1,Tablet(s),Every Morning,4.5,30
+Omeprazole 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.45,30
+Omeprazole 20mg Tablet,Losec,1,Tablet(s),Every Morning,5.5,30
+Omeprazole 20mg Tablet,Olit,1,Tablet(s),Every Morning,0.45,30
+Famotidine 20mg Tablet,Generic,1,Tablet(s),Every Morning,0.35,30
+Famotidine 20mg Tablet,7DY,1,Tablet(s),Every Morning,0.35,30
+Famotidine 40mg Tablet,Generic,1,Tablet(s),Every Morning,0.32,30
+Pantoprazole 40 mg Enteric-Coated Tablet,Generic,1,Tablet(s),Every Morning,1.16,28
+Calcium Carbonate 450 mg + Colecalciferol 200 iu Tablet,Suncal-D,1,Tablet(s),Every Morning,0.24,30
+Vitamin B1 100 mg + Vitamin B6 200 mg + Vitamin B12 200 microgram Tablet,Daneuron,1,Tablet(s),Every Morning,0.3,30
+Glucosamine Sulphate 1500mg Tablets,OH-Veg,1,Tablet(s),Daily,0.84,60
+Fenofibrate 100mg Capsule,Trolip,1,Capsule(s),Every Morning,0.34,30
+Ezetimibe 10mg Tablet,Ezetrol,1,Tablet(s),Every Morning,2.37,30
+Lovastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.39,30
+Lovastatin 20mg Tablet,Ellanco,1,Tablet(s),Every Evening,0.39,30
+Lovastatin 20mg Tablet,Medostatin,1,Tablet(s),Every Evening,0.42,30
+Simvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,0.41,30
+Simvastatin 10mg Tablet,Simvor (7DY),1,Tablet(s),Every Evening,0.41,30
+Simvastatin 10mg Tablet,APO,1,Tablet(s),Every Evening,0.65,30
+Simvastatin 10mg Tablet,Simtin,1,Tablet(s),Every Evening,0.69,30
+Simvastatin 10mg Tablet,Zocor,1,Tablet(s),Every Evening,1.8,30
+Simvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.55,30
+Simvastatin 20mg Tablet,Simvor (7DY),1,Tablet(s),Every Evening,0.55,30
+Simvastatin 20mg Tablet,Priacin,1,Tablet(s),Every Evening,0.62,30
+Simvastatin 20mg Tablet,Simtin,1,Tablet(s),Every Evening,0.95,30
+Simvastatin 20mg Tablet,Simvas,1,Tablet(s),Every Evening,0.57,30
+Simvastatin 20mg Tablet,Zocor,1,Tablet(s),Every Evening,1.8,30
+Vytorin Tablet 10mg/10mg (Ezetimibe 10mg + Simvastatin 10mg),Vytorin,1,Tablet(s),Every Morning,2.59,30
+Vytorin Tablet 10mg/20mg (Ezetimibe 10mg + Simvastatin 20mg),Vytorin,1,Tablet(s),Every Morning,2.8,30
+Atorvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,0.77,30
+Atorvastatin 10mg Tablet,Atoris,1,Tablet(s),Every Evening,0.77,30
+Atorvastatin 10mg Tablet,Lipitor,1,Tablet(s),Every Evening,1.9,30
+Atorvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,0.76,30
+Atorvastatin 20mg Tablet,Tulip,1,Tablet(s),Every Evening,0.76,30
+Atorvastatin 20mg Tablet,Atoris,1,Tablet(s),Every Evening,1.03,30
+Atorvastatin 20mg Tablet,Lipitor,1,Tablet(s),Every Evening,1.9,30
+Rosuvastatin 5mg Tablet,Crestor,1,Tablet(s),Every Evening,1.94,28
+Rosuvastatin 10mg Tablet,Generic,1,Tablet(s),Every Evening,1.13,30
+Rosuvastatin 10mg Tablet,Sandoz,1,Tablet(s),Every Evening,1.13,30
+Rosuvastatin 10mg Tablet,Crestor,1,Tablet(s),Every Evening,2.8,28
+Rosuvastatin 20mg Tablet,Generic,1,Tablet(s),Every Evening,1.37,30
+Rosuvastatin 20mg Tablet,Sandoz,1,Tablet(s),Every Evening,1.37,30
+Rosuvastatin 20mg Tablet,Crestor,1,Tablet(s),Every Evening,3.51,28
+Paracetmol 500mg Tablet,Uphamol,2,Tablet(s),4 times/day,0.1,40
+Paracetamol 450 mg + Orphenadrine Citrate 35 mg Tablet,Suniton,2,Tablet(s),3 times/day,0.12,40
+Naproxen Sodium. 275mg Tablet,Generic,2,Tablet(s),2 times/day,0.4,40
+Naproxen Sodium. 275mg Tablet,Soden,2,Tablet(s),2 times/day,0.4,40
+Naproxen Sodium. 275mg Tablet,Synflex,2,Tablet(s),2 times/day,0.8,40
+Diclofenac 50mg Tablet,Clofenac,1,Tablet(s),3 times/day,0.4,40
+Colchicine 600mcg Tablet,Colcitex,1,Tablet(s),3 times/day,0.6,40
+Allopurinol 100mg Tablet,Generic,1,Tablet(s),Every Morning,0.36,30
+Allopurinol 300mg Tablet,APO,1,Tablet(s),Every Morning,0.46,100
+Mometasone Furoate 50 mcg/actuation (60 Doses),Nasonex,2,Spray(s),Every Morning,0.6,60
+Mometasone Furoate 50 mcg/actuation (140 Doses),Nasonex,2,Spray(s),Every Morning,0.36,140
+Fexofenadine Hydrochloride 180 mg Tablet,Telfast,1,Tablet(s),Every Morning,1.1,20
+Lorataine 10mg Tablet,Generic,1,Tablet(s),Every Morning,0.6,30
+Lorataine 10mg Tablet,Lorfast,1,Tablet(s),Every Morning,0.6,30
+Lorataine 10mg Tablet,Clarityn,1,Tablet(s),Every Morning,1.5,30
+Chlorpheniramine Maleate 4 mg Tablet,Generic,1,Tablet(s),3 times/day,0.35,40
+Chlorpheniramine Maleate 4 mg Tablet,7DY,1,Tablet(s),3 times/day,0.35,40
+Chlorpheniramine Maleate 4 mg Tablet,Chloramine,1,Tablet(s),3 times/day,0.35,40
+Salbutamol 100 microgram/ actuation Inhaler,Generic,2,Puff(s),3 times/day,0.07,200
+Salbutamol 100 microgram/ actuation Inhaler,Salbuair,2,Puff(s),3 times/day,0.08,200
+Salbutamol 100 microgram/ actuation Inhaler,Ventolin,2,Puff(s),3 times/day,0.1,200
+Salbutamol 100 microgram/ actuation Inhaler,Azmasol,2,Puff(s),3 times/day,0.07,200
+Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (120 Doses),Symbicort,1,Inhalation(s),2 times/day,0.9,120
+Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (60 Doses),Symbicort,1,Inhalation(s),2 times/day,1,60
