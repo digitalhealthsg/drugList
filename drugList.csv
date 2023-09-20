@@ -226,9 +226,9 @@ id,drugName,drugBrand,drugDoseQuantity,drugDoseUnit,drugDoseFrequencyFactor,drug
 225,Chlorpheniramine Maleate 4 mg Tablet,Generic,1,Tablet(s),3 times/day,0.35,40
 226,Chlorpheniramine Maleate 4 mg Tablet,7DY,1,Tablet(s),3 times/day,0.35,40
 227,Chlorpheniramine Maleate 4 mg Tablet,Chloramine,1,Tablet(s),3 times/day,0.35,40
-228,Salbutamol 100 microgram/ actuation Inhaler,Generic,2,Puff(s),3 times/day,0.07,200
-229,Salbutamol 100 microgram/ actuation Inhaler,Salbuair,2,Puff(s),3 times/day,0.08,200
-230,Salbutamol 100 microgram/ actuation Inhaler,Ventolin,2,Puff(s),3 times/day,0.1,200
-231,Salbutamol 100 microgram/ actuation Inhaler,Azmasol,2,Puff(s),3 times/day,0.07,200
-232,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (120 Doses),Symbicort,1,Inhalation(s),2 times/day,0.9,120
-233,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (60 Doses),Symbicort,1,Inhalation(s),2 times/day,1,60
+228,Salbutamol 100 microgram/ actuation Inhaler,Generic,2,Puff(s),3 times/day,0.04,200
+229,Salbutamol 100 microgram/ actuation Inhaler,Salbuair,2,Puff(s),3 times/day,0.04,200
+230,Salbutamol 100 microgram/ actuation Inhaler,Ventolin,2,Puff(s),3 times/day,0.05,200
+231,Salbutamol 100 microgram/ actuation Inhaler,Azmasol,2,Puff(s),3 times/day,0.04,200
+232,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (120 Doses),Symbicort,1,Inhalation(s),2 times/day,0.45,120
+233,Budesonide 160 mcg/ actuation + Formoterol 4.5 mcg/ actuation (60 Doses),Symbicort,1,Inhalation(s),2 times/day,0.5,60
